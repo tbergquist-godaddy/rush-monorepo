@@ -984,12 +984,26 @@
   dependencies:
     mkdirp "^1.0.4"
 
+"@rush-temp/flow@file:./projects/flow.tgz":
+  version "0.0.0"
+  resolved "file:./projects/flow.tgz#872d6e50572e99f11c2a3e2784ae9a06bac6c4e4"
+  dependencies:
+    flow-bin "^0.131.0"
+
 "@rush-temp/my-app@file:./projects/my-app.tgz":
   version "0.0.0"
   resolved "file:./projects/my-app.tgz"
   dependencies:
+    "@adeira/babel-preset-adeira" "^0.4.0"
+    "@babel/core" "^7.11.1"
+    babel-loader "^8.1.0"
+    copy-webpack-plugin "^6.0.3"
     http-server "^0.12.3"
     react "^16.13.1"
+    react-dom "^16.13.1"
+    webpack "^4.44.1"
+    webpack-cli "^3.3.12"
+    webpack-dev-server "^3.11.0"
 
 "@types/glob@^7.1.1":
   version "7.1.3"
@@ -2570,6 +2584,11 @@ findup-sync@^3.0.0:
     is-glob "^4.0.0"
     micromatch "^3.0.4"
     resolve-dir "^1.0.1"
+
+flow-bin@^0.131.0:
+  version "0.131.0"
+  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.131.0.tgz#d4228b6070afdf3b2a76acdee77a7f3f8e8f5133"
+  integrity sha512-fZmoIBcDrtLhy/NNMxwJysSYzMr1ksRcAOMi3AHSoYXfcuQqTvhGJx+wqjlIOqIwz8RRYm8J4V4JrSJbIKP+Xg==
 
 flush-write-stream@^1.0.0:
   version "1.1.1"

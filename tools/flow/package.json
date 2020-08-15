@@ -1,0 +1,11 @@
+{
+  "name": "@tbergq/flow",
+  "version": "0.0.1",
+  "devDependencies": {
+    "flow-bin": "^0.131.0"
+  },
+  "scripts": {
+    "typecheck": "flow",
+    "build": ""
+  }
+}

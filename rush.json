@@ -298,6 +298,10 @@
     {
       "packageName": "my-app",
       "projectFolder": "src/my-app"
+    },
+    {
+      "packageName": "@tbergq/flow",
+      "projectFolder": "tools/flow"
     }
   ]
 }
