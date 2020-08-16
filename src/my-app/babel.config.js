@@ -1,4 +1,6 @@
-module.exports = function (api) {
+// @flow
+
+module.exports = function (api /*: Object */) /*: Object  */ {
   api.assertVersion(7);
   api.cache.forever();
 
