@@ -17,14 +17,25 @@
     "description": "Code style formatting",
 
     "shellCommand": "prettier . --write"
-  },{
+  },
+  {
     "commandKind": "global",
     "name": "typecheck",
     "summary": "Runs flow",
     "description": "Static typechecking",
 
     "shellCommand": "(cd tools/flow && rushx typecheck)"
-  }],
+  },
+  {
+    "commandKind": "bulk",
+    "name": "lint",
+    "summary": "Runs eslint",
+    "description": "Lint codebase",
+    "enableParallelism": true,
+    "incremental": true,
+    "ignoreMissingScript": true
+  }
+],
 
   /**
    * Custom "parameters" introduce new parameters for specified Rush command-line commands.
