@@ -1,0 +1,19 @@
+{
+  "name": "@tbergq/theme",
+  "private": false,
+  "version": "0.0.1",
+  "main": "dist/index",
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/cli": "^7.10.5",
+    "@adeira/babel-preset-adeira": "^0.4.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.11.2"
+  },
+  "scripts": {
+    "build:cjs": "babel src -d dist --ignore \"node_modules\"",
+    "build:flow": "babel src -d dist --ignore \"node_modules\" --out-file-extension .js.flow",
+    "build": "yarn build:cjs && yarn build:flow"
+  }
+}

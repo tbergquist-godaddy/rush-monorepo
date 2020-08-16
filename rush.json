@@ -300,6 +300,10 @@
       "projectFolder": "src/my-app"
     },
     {
+      "packageName": "@tbergq/theme",
+      "projectFolder": "src/theme"
+    },
+    {
       "packageName": "@tbergq/flow",
       "projectFolder": "tools/flow"
     }
