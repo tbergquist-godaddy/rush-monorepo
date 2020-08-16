@@ -30,11 +30,10 @@ jobs:
       uses: actions/cache@v2
       with:
         path: |
-          ~/cache
-          !~/cache/exclude
           **/node_modules
           **/dist
-        key: ${{ runner.os }}-${{ hashFiles('**/lockfiles') }}
+          common/temp
+        key: ${{ runner.os }}-yarn-${{ hashFiles('common/config/rush/yarn.lock') }}
 
 
     - name: Build
