@@ -8,10 +8,10 @@ type TestType = {
   +value: string,
 };
 
-function App() {
+export function App(): React.Node {
   const text: TestType = { value: 'hey you' };
   return (
-    <div>
+    <div data-testid="app">
       {text.value}
       <div>
         This is your theme <br />
