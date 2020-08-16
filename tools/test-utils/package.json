@@ -1,0 +1,11 @@
+{
+  "name": "@tbergq/test-utils",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "build": ""
+  },
+  "devDependencies": {
+    "is-ci": "^2.0.0"
+  }
+}

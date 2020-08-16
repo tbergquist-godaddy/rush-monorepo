@@ -6,10 +6,11 @@
   "devDependencies": {
     "eslint": "^7.7.0",
     "@adeira/eslint-config": "^3.1.1",
-    "jest": "^26.4.0"
+    "jest": "^26.4.0",
+    "@tbergq/test-utils": "^0.0.1"
   },
   "scripts": {
     "build": "",
-    "test": ""
+    "test": "jest"
   }
 }
