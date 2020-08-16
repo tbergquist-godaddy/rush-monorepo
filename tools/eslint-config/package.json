@@ -10,6 +10,6 @@
   },
   "scripts": {
     "build": "",
-    "test": "jest"
+    "test": ""
   }
 }

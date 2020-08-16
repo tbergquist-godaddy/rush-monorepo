@@ -2,7 +2,6 @@
 
 name: CI
 
-
 on: [push]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -18,28 +17,27 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
 
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-        
-    - name: Cache multiple paths
-      uses: actions/cache@v2
-      with:
-        path: |
-          **/node_modules
-          **/dist
-          common/temp
-        key: ${{ runner.os }}-yarn-${{ hashFiles('common/config/rush/yarn.lock') }}
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
 
+      - name: Cache multiple paths
+        uses: actions/cache@v2
+        with:
+          path: |
+            **/dist
+            common/temp
+          key: ${{ runner.os }}-yarn-${{ hashFiles('common/config/rush/yarn.lock') }}
 
-    - name: Build
-      run: |
-        node common/scripts/install-run-rush.js install --no-link
-        node common/scripts/install-run-rush.js link
-        node common/scripts/install-run-rush.js build -v
-        node common/scripts/install-run-rush.js typecheck
-        node common/scripts/install-run-rush.js lint
+      - name: Build
+        run: |
+          node common/scripts/install-run-rush.js install --no-link
+          node common/scripts/install-run-rush.js link
+          node common/scripts/install-run-rush.js build -v -o
+          node common/scripts/install-run-rush.js typecheck
+          node common/scripts/install-run-rush.js lint -o
+          node common/scripts/install-run-rush.js test -o

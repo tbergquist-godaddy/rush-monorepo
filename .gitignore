@@ -66,3 +66,6 @@ common/autoinstallers/*/.npmrc
 
 # builds
 dist/
+
+# Jest temp files
+test-results.json

@@ -34,6 +34,15 @@
     "enableParallelism": true,
     "incremental": true,
     "ignoreMissingScript": true
+  },
+  {
+    "commandKind": "bulk",
+    "name": "test",
+    "summary": "Runs tests",
+    "description": "Test codebase",
+    "enableParallelism": true,
+    "incremental": true,
+    "ignoreMissingScript": true
   }
 ],
 
