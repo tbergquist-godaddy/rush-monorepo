@@ -4,10 +4,15 @@ import * as React from 'react';
 import { render } from 'react-dom';
 import theme from '@tbergq/theme';
 
+type TestType = {
+  +value: string,
+};
+
 function App() {
+  const text: TestType = { value: 'hey you' };
   return (
     <div>
-      hey you
+      {text.value}
       <div>
         This is your theme <br />
         <span

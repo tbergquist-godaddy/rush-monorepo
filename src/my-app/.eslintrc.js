@@ -3,7 +3,7 @@
 module.exports = {
   root: true,
 
-  extends: ['@adeira/eslint-config'],
+  extends: ['@tbergq/eslint-config'],
 
   // adjust the rules as needed
   parser: 'babel-eslint',

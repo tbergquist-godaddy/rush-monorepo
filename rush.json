@@ -306,6 +306,10 @@
     {
       "packageName": "@tbergq/flow",
       "projectFolder": "tools/flow"
+    },
+    {
+      "packageName": "@tbergq/eslint-config",
+      "projectFolder": "tools/eslint-config"
     }
   ]
 }

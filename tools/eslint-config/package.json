@@ -1,0 +1,10 @@
+{
+  "name": "@tbergq/eslint-config",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "index",
+  "devDependencies": {
+    "eslint": "^7.7.0",
+    "@adeira/eslint-config": "^3.1.1"
+  }
+}
