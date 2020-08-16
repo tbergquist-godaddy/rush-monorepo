@@ -5,6 +5,11 @@
   "main": "index",
   "devDependencies": {
     "eslint": "^7.7.0",
-    "@adeira/eslint-config": "^3.1.1"
+    "@adeira/eslint-config": "^3.1.1",
+    "jest": "^26.4.0"
+  },
+  "scripts": {
+    "build": "",
+    "test": "jest"
   }
 }
