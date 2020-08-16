@@ -30,9 +30,9 @@ jobs:
       uses: actions/cache@v2
       with:
         path: |
-          **/node_modules
           **/dist
           common/temp
+          ~/.rush
         key: ${{ runner.os }}-yarn-${{ hashFiles('common/config/rush/yarn.lock') }}
 
 
@@ -40,6 +40,7 @@ jobs:
       run: |
         node common/scripts/install-run-rush.js install --no-link
         node common/scripts/install-run-rush.js link
+        node common/scripts/install-run-rush.js build -v
         node common/scripts/install-run-rush.js build -v
         node common/scripts/install-run-rush.js typecheck
         node common/scripts/install-run-rush.js lint
