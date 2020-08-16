@@ -310,6 +310,10 @@
     {
       "packageName": "@tbergq/eslint-config",
       "projectFolder": "tools/eslint-config"
+    },
+    {
+      "packageName": "@tbergq/test-utils",
+      "projectFolder": "tools/test-utils"
     }
   ]
 }
