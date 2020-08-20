@@ -36,7 +36,7 @@ jobs:
 
       - name: Build
         run: |
-          node common/scripts/install-run-rush.js install --no-link
+          node common/scripts/install-run-rush.js install -p --no-link
           node common/scripts/install-run-rush.js link
           node common/scripts/install-run-rush.js build -v -o
           node common/scripts/install-run-rush.js typecheck
