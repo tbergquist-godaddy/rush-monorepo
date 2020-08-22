@@ -12,9 +12,8 @@
     "@babel/runtime": "^7.11.2"
   },
   "scripts": {
-    "babel:build": "babel src -d dist --ignore \"node_modules\" --root-mode upward",
-    "build:cjs": "rushx babel:build",
-    "build:flow": "rushx babel:build --out-file-extension .js.flow",
+    "build:cjs": "babel src -d dist --ignore \"node_modules\"",
+    "build:flow": "babel src -d dist --ignore \"node_modules\" --out-file-extension .js.flow",
     "build": "rushx build:cjs && rushx build:flow"
   }
 }
