@@ -13,6 +13,9 @@ shrinkwrap.json
 # Build outputs
 dist
 lib
+public
 
 # Prettier reformats code blocks inside Markdown, which affects rendered output
 *.md
+
+.vercel
