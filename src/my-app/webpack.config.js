@@ -32,6 +32,10 @@ module.exports = {
           loader: 'babel-loader',
         },
       },
+      {
+        test: (/\.css$/i /*: RegExp  */),
+        use: ['style-loader', 'css-loader'],
+      },
     ],
   },
 };
