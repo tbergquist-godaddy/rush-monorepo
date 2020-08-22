@@ -21,12 +21,15 @@
     "@adeira/eslint-config": "^3.1.1",
     "@tbergq/test-utils": "^0.0.1",
     "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^3.3.12",
+    "css-loader": "^4.2.1",
+    "style-loader": "^1.2.1"
   },
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "@tbergq/theme": "~0.0.1",
-    "vercel": "^19.2.0"
+    "vercel": "^19.2.0",
+    "@adeira/sx": "^0.4.0"
   }
 }
