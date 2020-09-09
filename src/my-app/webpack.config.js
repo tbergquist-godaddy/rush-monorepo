@@ -13,13 +13,13 @@ module.exports = {
     path: (path.resolve(__dirname, 'dist') /*: string */),
   },
   plugins: [
-    (new CleanWebpackPlugin() /*: CleanWebpackPlugin */),
+    (new CleanWebpackPlugin() /*: Object */),
     (new HtmlWebpackPlugin({
       title: 'My app',
       hash: true,
       scriptLoading: 'defer',
       template: 'src/index.html',
-    }) /*: HtmlWebpackPlugin */),
+    }) /*: Object */),
   ],
   devServer: {
     contentBase: (path.join(__dirname, 'dist') /*: string */),
