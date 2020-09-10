@@ -1,32 +1,27 @@
-// @flow strict-local
+// @flow
 
 import * as React from 'react';
 import { render } from 'react-dom';
 import * as sx from '@adeira/sx';
-import { Button, Navbar } from '@tbergq/components';
+import { Navbar } from '@tbergq/components';
 import '@tbergq/components/dist/theme.css';
+import { HashRouter } from 'react-router-dom';
 
 import './app.css';
+import Router from './components/router';
 
 export function App(): React.Node {
   return (
-    <>
+    <HashRouter>
       <Navbar brand="Team assistant" />
       <div data-testid="app" className={styles('container')}>
-        <div>
-          <h1 className={styles('header')}>TODO</h1>
-          <Button>Buttons</Button>
-        </div>
+        <Router />
       </div>
-    </>
+    </HashRouter>
   );
 }
 
 const styles = sx.create({
-  header: {
-    fontSize: 30,
-    color: 'red',
-  },
   container: {
     padding: 'var(--space-large)',
   },
