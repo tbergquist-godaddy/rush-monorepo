@@ -17,12 +17,14 @@
     "@babel/core": "^7.11.6"
   },
   "scripts": {
-    "build": "babel src --out-dir dist/ && babel src --out-dir dist/ --out-file-extension .mjs && babel src --out-dir dist/ --out-file-extension .js.flow",
+    "build:dev": "babel src --out-dir dist/ --out-file-extension .mjs --watch --copy-files",
+    "build": "babel src --out-dir dist/ --copy-files && babel src --out-dir dist/ --out-file-extension .mjs && babel src --out-dir dist/ --out-file-extension .js.flow",
     "lint": "eslint . --fix",
     "test": ""
   },
   "dependencies": {
-    "@babel/runtime": "^7.11.2"
+    "@babel/runtime": "^7.11.2",
+    "@adeira/sx": "^0.10.0"
   },
   "peerDependencies": {
     "react": "^16.3.1"

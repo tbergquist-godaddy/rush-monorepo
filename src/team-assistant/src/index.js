@@ -3,16 +3,22 @@
 import * as React from 'react';
 import { render } from 'react-dom';
 import * as sx from '@adeira/sx';
+import { Button, Navbar } from '@tbergq/components';
+import '@tbergq/components/dist/theme.css';
 
 import './app.css';
 
 export function App(): React.Node {
   return (
-    <div data-testid="app" className={styles('container')}>
-      <div>
-        <h1 className={styles('header')}>TODO</h1>
+    <>
+      <Navbar brand="Team assistant" />
+      <div data-testid="app" className={styles('container')}>
+        <div>
+          <h1 className={styles('header')}>TODO</h1>
+          <Button>Buttons</Button>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
@@ -22,7 +28,7 @@ const styles = sx.create({
     color: 'red',
   },
   container: {
-    padding: '16px',
+    padding: 'var(--space-large)',
   },
 });
 

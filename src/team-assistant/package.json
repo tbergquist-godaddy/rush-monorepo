@@ -31,6 +31,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "vercel": "^19.2.0",
-    "@adeira/sx": "^0.10.0"
+    "@adeira/sx": "^0.10.0",
+    "@tbergq/components": "^0.0.1"
   }
 }
