@@ -300,6 +300,10 @@
       "projectFolder": "src/my-app"
     },
     {
+      "packageName": "@tbergq/team-assistant-gql",
+      "projectFolder": "src/team-assistant-gql"
+    },
+    {
       "packageName": "@tbergq/theme",
       "projectFolder": "src/theme"
     },

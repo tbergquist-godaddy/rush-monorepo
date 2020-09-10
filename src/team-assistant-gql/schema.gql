@@ -1,0 +1,13 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Test {
+  id: ID!
+  firstName: String!
+  lastName: String
+}
+
+type Query {
+  test(id: String!): Test!
+}
