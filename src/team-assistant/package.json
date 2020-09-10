@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "@tbergq/team-assistant",
   "version": "0.0.1",
   "scripts": {
     "build": "webpack",
@@ -30,8 +30,7 @@
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "@tbergq/theme": "~0.0.1",
     "vercel": "^19.2.0",
-    "@adeira/sx": "^0.4.0"
+    "@adeira/sx": "^0.10.0"
   }
 }

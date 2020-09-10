@@ -2,7 +2,6 @@
 
 import * as React from 'react';
 import { render } from 'react-dom';
-import theme from '@tbergq/theme';
 import * as sx from '@adeira/sx';
 
 import './app.css';
@@ -11,12 +10,7 @@ export function App(): React.Node {
   return (
     <div data-testid="app" className={styles('container')}>
       <div>
-        <h1 className={styles('header')}>This is your theme</h1>
-        <span
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(theme, null, 2).replace(/\n/g, '<br />'),
-          }}
-        />
+        <h1 className={styles('header')}>TODO</h1>
       </div>
     </div>
   );
@@ -28,16 +22,21 @@ const styles = sx.create({
     color: 'red',
   },
   container: {
-    padding: theme.spacing.increased,
+    padding: '16px',
   },
 });
 
-const styleTag = document.createElement('style');
-styleTag.innerHTML = sx.renderStatic(() => {}).css;
+const sxStyleTags = sx.renderPageWithSX(() => {}).styles;
 const head = document.head;
 
-if (head != null) {
-  head.appendChild(styleTag);
+for (const style of sxStyleTags) {
+  const styleTag = document.createElement('style');
+  styleTag.innerHTML = style.props.children;
+  styleTag.setAttribute('data-adeira-sx', 'true');
+
+  if (head != null) {
+    head.appendChild(styleTag);
+  }
 }
 
 const root = document.querySelector('#root');

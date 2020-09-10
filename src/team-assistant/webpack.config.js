@@ -31,8 +31,15 @@ module.exports = {
       chunks: 'all',
     },
   },
+  resolve: {
+    extensions: ['.mjs', '.js', '.jsx', '.ts', '.tsx', '.json'],
+  },
   module: {
     rules: [
+      {
+        type: 'javascript/auto',
+        test: (/\.mjs$/ /*: RegExp */),
+      },
       {
         test: (/\.(?:js)$/ /*: RegExp */),
         use: {
