@@ -296,16 +296,12 @@
    */
   "projects": [
     {
-      "packageName": "my-app",
-      "projectFolder": "src/my-app"
-    },
-    {
       "packageName": "@tbergq/team-assistant-gql",
       "projectFolder": "src/team-assistant-gql"
     },
     {
-      "packageName": "@tbergq/theme",
-      "projectFolder": "src/theme"
+      "packageName": "@tbergq/team-assistant",
+      "projectFolder": "src/team-assistant"
     },
     {
       "packageName": "@tbergq/flow",
