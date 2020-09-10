@@ -1905,6 +1905,18 @@
   resolved "https://registry.yarnpkg.com/@protobufjs/utf8/-/utf8-1.1.0.tgz#a777360b5b39a1a2e5106f8e858f2fd2d060c570"
   integrity sha1-p3c2C1s5oaLlEG+OhY8v0tBgxXA=
 
+"@rush-temp/components@file:./projects/components.tgz":
+  version "0.0.0"
+  resolved "file:./projects/components.tgz"
+  dependencies:
+    "@adeira/babel-preset-adeira" "^1.0.0"
+    "@adeira/eslint-config" "^3.1.1"
+    "@babel/cli" "^7.11.6"
+    "@babel/runtime" "^7.11.2"
+    babel-eslint "^10.1.0"
+    jest "^26.4.2"
+    react "^16.13.1"
+
 "@rush-temp/eslint-config@file:./projects/eslint-config.tgz":
   version "0.0.0"
   resolved "file:./projects/eslint-config.tgz"
@@ -4186,6 +4198,11 @@ commander@^2.20.0, commander@^2.20.3:
   version "2.20.3"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
   integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
+
+commander@^6.1.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-6.1.0.tgz#f8d722b78103141006b66f4c7ba1e97315ba75bc"
+  integrity sha512-wl7PNrYWd2y5mp1OK/LhTlv8Ff4kQJQRXXAvF+uU/TPNiVJUxZLRYGj/B0y/lPGAVcSbJqH2Za/cvHmrPMC8mA==
 
 commondir@^1.0.1:
   version "1.0.1"

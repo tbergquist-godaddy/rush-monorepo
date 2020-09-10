@@ -304,6 +304,10 @@
       "projectFolder": "src/team-assistant"
     },
     {
+      "packageName": "@tbergq/components",
+      "projectFolder": "src/components"
+    },
+    {
       "packageName": "@tbergq/flow",
       "projectFolder": "tools/flow"
     },
