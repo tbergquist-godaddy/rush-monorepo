@@ -1,12 +1,19 @@
 // @flow
 
+function isWebpack(caller) /*: boolean %checks */ {
+  // https://github.com/babel/babel-loader
+  return !!(caller && caller.name === 'babel-loader');
+}
+
 module.exports = function (api /*: Object */) /*: Object  */ {
   api.assertVersion(7);
-  api.cache.forever();
 
-  const presets = ['@adeira/babel-preset-adeira'];
+  const presets = [
+    ['@adeira/babel-preset-adeira', { target: api.caller(isWebpack) ? 'js-esm' : 'js' }],
+  ];
 
   return {
     presets,
+    plugins: ['@babel/plugin-syntax-dynamic-import'],
   };
 };

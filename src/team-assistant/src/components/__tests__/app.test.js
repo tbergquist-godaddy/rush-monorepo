@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { render } from 'react-dom';
 
-import { App } from '..';
+import App from '../app';
 
 let screen;
 

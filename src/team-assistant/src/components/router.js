@@ -1,19 +1,18 @@
 // @flow
 
 import * as React from 'react';
-import { Switch, Route, Link } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
+
+const Login = React.lazy(() => import('../login/login'));
+const Home = React.lazy(() => import('../home/home'));
 
 export default function Router(): React.Node {
   return (
-    <Switch>
-      <Route path="/login">
-        <div>Login TODO</div>
-        <Link to="/">Go home</Link>
-      </Route>
-      <Route path="/">
-        <div>Home TODO</div>
-        <Link to="/login">Go to login</Link>
-      </Route>
-    </Switch>
+    <React.Suspense fallback={<div>loading</div>}>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/login" component={Login} />
+      </Switch>
+    </React.Suspense>
   );
 }
