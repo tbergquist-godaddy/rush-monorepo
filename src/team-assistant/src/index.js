@@ -3,7 +3,6 @@
 import * as React from 'react';
 import { render } from 'react-dom';
 import * as sx from '@adeira/sx';
-import '@tbergq/components/dist/theme.css';
 
 import './app.css';
 import App from './components/app';

@@ -6,7 +6,8 @@
     "dev": "webpack-dev-server",
     "lint": "eslint . --fix",
     "test": "jest",
-    "vercel-build": "mv dist/ public/"
+    "vercel-build": "cp dist/ deploy/public/",
+    "deploy": "rm -rf deploy/public && cp -R dist/ deploy/public/ && vercel deploy/"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^6.1.0",
@@ -31,7 +32,7 @@
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "vercel": "^19.2.0",
+    "vercel": "^20.1.0",
     "@adeira/sx": "^0.10.0",
     "@tbergq/components": "^0.0.1",
     "react-router-dom": "^5.2.0"
