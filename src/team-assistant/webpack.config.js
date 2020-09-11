@@ -40,6 +40,9 @@ module.exports = {
         test: (/\.(?:js)$/ /*: RegExp */),
         use: {
           loader: 'babel-loader',
+          options: {
+            sourceType: 'unambiguous',
+          },
         },
       },
       {

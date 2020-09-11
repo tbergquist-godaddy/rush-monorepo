@@ -1,3 +1,5 @@
+@import '@tbergq/components/dist/theme.css';
+
 body {
   font-family: Roboto, sans-serif;
 }
