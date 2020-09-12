@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 
-import CreateAccountResolver from './create-account-resolver';
+import CreateAccountResolver from './account-resolver';
 import IdentityResolver from './identity-resolver';
 
 @Module({

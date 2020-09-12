@@ -12,6 +12,6 @@ export default class Identity {
   @Field(() => ID)
   id: string;
 
-  @Field()
-  email: string;
+  @Field({ nullable: true })
+  email?: string;
 }
