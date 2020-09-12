@@ -8,6 +8,10 @@ import UserModel from '../../database/models/users';
 
 let app: INestApplication;
 
+jest.mock('jsonwebtoken', () => ({
+  sign: () => 'mock_token',
+}));
+
 beforeAll(async () => {
   const moduleRef = await Test.createTestingModule({
     imports: [AppModule],
@@ -80,5 +84,33 @@ it('returns error for missing password', async () => {
     .expect(200)
     .expect({
       data: { createAccount: { reason: 'MISSING_PASSWORD' } },
+    });
+});
+
+const loginQuery = `mutation login($email: String!, $password: String!) {
+  login(email: $email, password: $password) {
+    token
+  }
+}`;
+
+it('logs user in', async () => {
+  await (<any>UserModel).createUser({ email, password });
+  await request(app.getHttpServer())
+    .post('/graphql')
+    .send({ query: loginQuery, variables: { email, password } })
+    .expect(200)
+    .expect({
+      data: { login: { token: 'mock_token' } },
+    });
+});
+
+it('returns null for wrong password', async () => {
+  await (<any>UserModel).createUser({ email, password: 'lol' });
+  await request(app.getHttpServer())
+    .post('/graphql')
+    .send({ query: loginQuery, variables: { email, password } })
+    .expect(200)
+    .expect({
+      data: { login: { token: null } },
     });
 });

@@ -66,6 +66,19 @@ class UserDoc extends mongoose.Model {
     });
     return user.toObject({ virtuals: false });
   }
+
+  static async getByEmail(email: string): Promise<UserDoc | null> {
+    const user = await this.findById(email);
+    return user;
+  }
+
+  static async verifyPassword(email: string, password: string): Promise<UserDoc | null> {
+    const user = await this.getByEmail(email);
+    if (user == null || user.password !== encryptPassword(password, user.salt)) {
+      return null;
+    }
+    return user.toJSON();
+  }
 }
 
 UserSchema.loadClass(UserDoc);
