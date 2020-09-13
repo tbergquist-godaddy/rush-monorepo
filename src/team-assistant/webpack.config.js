@@ -9,7 +9,7 @@ module.exports = {
     index: './src/index.js',
   },
   output: {
-    filename: '[name].bundle.js',
+    filename: '[name].[contenthash].bundle.js',
     chunkFilename: '[contenthash].bundle.js',
     path: (path.resolve(__dirname, 'dist') /*: string */),
   },
@@ -26,6 +26,11 @@ module.exports = {
     contentBase: (path.join(__dirname, 'dist') /*: string */),
     compress: true,
     port: 9000,
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
   },
   resolve: {
     extensions: ['.mjs', '.js', '.jsx', '.ts', '.tsx', '.json'],
