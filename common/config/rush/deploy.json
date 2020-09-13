@@ -17,7 +17,7 @@
    * If the main project should include other unrelated Rush projects, add it to the "projectSettings" section,
    * and then specify those projects in the "additionalProjectsToInclude" list.
    */
-  "deploymentProjectNames": ["@tbergq/team-assistant"],
+  "deploymentProjectNames": ["@tbergq/team-assistant", "@tbergq/team-assistant-gql"],
 
   /**
    * When deploying a local Rush project, the package.json "devDependencies" are normally excluded.
@@ -67,19 +67,21 @@
    * Customize how Rush projects are processed during deployment.
    */
   "projectSettings": [
-    // {
+     {
     //   /**
     //    * The full package name of the project, which must be declared in rush.json.
     //    */
-    //   "projectName": "@my-scope/my-project",
+       "projectName": "@tbergq/team-assistant-gql",
     //
     //   /**
     //    * A list of additional local Rush projects to be deployed with this project (beyond the package.json
     //    * dependencies).  Specify full package names, which must be declared in rush.json.
     //    */
-    //   "additionalProjectsToInclude": [
-    //     // "@my-scope/my-project2"
-    //   ],
+      "additionalProjectsToInclude": [
+        "@tbergq/eslint-config",
+        "@tbergq/test-utils"
+      ]
+    }
     //
     //   /**
     //    * When deploying a project, the included dependencies are normally determined automatically based on

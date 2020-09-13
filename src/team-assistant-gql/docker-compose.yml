@@ -1,0 +1,11 @@
+version: '3'
+services:
+  team-assistant-gql:
+    build:
+      context: .
+    environment:
+      - MONGO_DB_URL=${MONGO_DB_URL}
+      - JWT_SECRET=${JWT_SECRET}
+    image: web
+    ports:
+      - '3000:3000'
