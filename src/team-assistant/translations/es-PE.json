@@ -1,12 +1,12 @@
 {
-  "fb-locale": "nb_NO",
+  "fb-locale": "es_PE",
   "translations": {
     "eRm64b0dkVt+121lfW8YVg==": {
       "tokens": [],
       "types": [],
       "translations": [
         {
-          "translation": "Hjem å gjøre",
+          "translation": "Casa a hacer",
           "variations": []
         }
       ]
@@ -16,7 +16,7 @@
       "types": [],
       "translations": [
         {
-          "translation": "log inn å gjøre",
+          "translation": "iniciar a hacer",
           "variations": []
         }
       ]

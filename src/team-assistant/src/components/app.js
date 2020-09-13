@@ -5,11 +5,16 @@ import { HashRouter as Router } from 'react-router-dom';
 import * as sx from '@adeira/sx';
 import { Navbar } from '@tbergq/components';
 import { init, IntlVariations } from 'fbt';
+import { RelayEnvironmentProvider } from 'react-relay/hooks';
 
 import translations from '../../translatedFbts.json';
 import Routes from './router';
+import environment from '../relay/environment';
 
 function getLanguage() {
+  if (navigator.language.startsWith('es')) {
+    return 'es_PE';
+  }
   switch (navigator.language) {
     case 'nb':
     case 'no':
@@ -35,12 +40,14 @@ export default function App(): React.Node {
     });
   }, []);
   return (
-    <Router>
-      <Navbar brand="Team assistant" />
-      <div data-testid="app" className={styles('container')}>
-        <Routes />
-      </div>
-    </Router>
+    <RelayEnvironmentProvider environment={environment}>
+      <Router>
+        <Navbar brand="Team assistant" />
+        <div data-testid="app" className={styles('container')}>
+          <Routes />
+        </div>
+      </Router>
+    </RelayEnvironmentProvider>
   );
 }
 
