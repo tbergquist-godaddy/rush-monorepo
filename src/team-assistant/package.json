@@ -50,6 +50,8 @@
     "babel-plugin-fbt": "^0.15.1",
     "babel-plugin-fbt-runtime": "^0.9.12",
     "react-relay": "0.0.0-experimental-183bdd28",
-    "relay-runtime": "^10.0.1"
+    "relay-runtime": "^10.0.1",
+    "history": "^5.0.0",
+    "@adeira/fetch": "^1.0.3"
   }
 }
