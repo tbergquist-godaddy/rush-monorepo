@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { HashRouter as Router } from 'react-router-dom';
 import * as sx from '@adeira/sx';
-import { Navbar } from '@tbergq/components';
+import { Navbar, breakpoints } from '@tbergq/components';
 import { init, IntlVariations } from 'fbt';
 import { RelayEnvironmentProvider } from 'react-relay/hooks';
 
@@ -54,5 +54,15 @@ export default function App(): React.Node {
 const styles = sx.create({
   container: {
     padding: 'var(--space-large)',
+    margin: '0 auto',
+    [breakpoints.tablet]: {
+      width: '750px',
+    },
+    [breakpoints.desktop]: {
+      width: '970px',
+    },
+    [breakpoints.largeDesktop]: {
+      width: '1170px',
+    },
   },
 });

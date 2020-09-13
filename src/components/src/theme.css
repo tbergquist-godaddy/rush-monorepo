@@ -1,7 +1,12 @@
 :root {
+  --border-radius-normal: 3px;
+
+  --color-gray-light: #dddada;
   --color-primary: #145a14;
+  --color-text-black: #1f1c1c;
   --color-white: #fff;
 
+  --space-x-small: 4px;
   --space-small: 8px;
   --space-normal: 12px;
   --space-large: 16px;
