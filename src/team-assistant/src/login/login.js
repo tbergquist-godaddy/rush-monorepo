@@ -11,6 +11,7 @@ export default function Login(): React.Node {
         <fbt desc="login todo">login TODO</fbt>
       </h1>
       <Link to="/">Go home</Link>
+      <Link to="/signup">Sign up</Link>
     </div>
   );
 }
