@@ -5,9 +5,9 @@
         "eRm64b0dkVt+121lfW8YVg==": "Home TODO"
       },
       "filepath": "src/home/home.js",
-      "line_beg": 11,
+      "line_beg": 26,
       "col_beg": 8,
-      "line_end": 11,
+      "line_end": 26,
       "col_end": 45,
       "desc": "Todo text",
       "project": "",
@@ -19,9 +19,9 @@
         "HzzziAk+1+ABS+lI7SSccw==": "login TODO"
       },
       "filepath": "src/login/login.js",
-      "line_beg": 10,
+      "line_beg": 11,
       "col_beg": 8,
-      "line_end": 10,
+      "line_end": 11,
       "col_end": 47,
       "desc": "login todo",
       "project": "",

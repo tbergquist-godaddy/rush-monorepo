@@ -15,6 +15,7 @@ module.exports = function (api /*: Object */) /*: Object  */ {
   return {
     presets,
     plugins: [
+      'relay',
       ['babel-plugin-fbt', { extraOptions: { __self: true } }],
       'babel-plugin-fbt-runtime',
       '@babel/plugin-syntax-dynamic-import',

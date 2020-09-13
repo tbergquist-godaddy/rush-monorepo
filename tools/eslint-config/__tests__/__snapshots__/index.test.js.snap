@@ -925,7 +925,7 @@ Object {
       },
     },
     "react": Object {
-      "version": "16.13.1",
+      "version": "17.0.0-alpha.0-experimental-94c0244ba",
     },
   },
 }
