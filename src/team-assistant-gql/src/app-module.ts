@@ -5,6 +5,7 @@ import { TestModule } from './test/test-module';
 import AccountModule from './account/account-module';
 import MorganMiddleware from './middleware/morgan';
 import CorsMiddleware from './middleware/cors';
+import CompressionMiddleware from './middleware/compression';
 
 @Module({
   imports: [
@@ -22,5 +23,6 @@ export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
     consumer.apply(MorganMiddleware).forRoutes('graphql');
     consumer.apply(CorsMiddleware).forRoutes('graphql');
+    consumer.apply(CompressionMiddleware).forRoutes('graphql');
   }
 }
