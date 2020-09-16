@@ -2,6 +2,7 @@
 common/changes/
 common/scripts/
 common/config/
+common/temp/pnpm-store/
 CHANGELOG.*
 
 # Package manager files
