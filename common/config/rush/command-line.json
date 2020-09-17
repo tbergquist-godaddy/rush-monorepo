@@ -43,6 +43,15 @@
     "enableParallelism": true,
     "incremental": true,
     "ignoreMissingScript": true
+  },
+  {
+    "commandKind": "bulk",
+    "name": "deploy:apps",
+    "summary": "Deploy apps",
+    "description": "Deploy apps",
+    "enableParallelism": true,
+    "incremental": true,
+    "ignoreMissingScript": true
   }
 ],
 
