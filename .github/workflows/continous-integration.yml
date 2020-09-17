@@ -42,3 +42,41 @@ jobs:
           node common/scripts/install-run-rush.js typecheck
           node common/scripts/install-run-rush.js lint -o
           node common/scripts/install-run-rush.js test -o
+
+  deploy:
+    name: deploy
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: [14.x]
+    needs: [build]
+    if: github.ref == 'refs/heads/master'
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Cache multiple paths
+        uses: actions/cache@v2
+        with:
+          path: |
+            **/dist
+            common/temp
+            **/.rush/temp
+          key: ${{ runner.os }}-yarn-${{ hashFiles('common/config/rush/pnpm-lock.yaml') }}
+
+      - name: Deploy
+        run: |
+          node common/scripts/install-run-rush.js install --no-link
+          node common/scripts/install-run-rush.js link
+          node common/scripts/install-run-rush.js build -v -o
+          yarn global add heroku
+          node common/scripts/install-run-rush.js deploy:apps
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+            
+

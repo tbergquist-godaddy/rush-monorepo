@@ -45,6 +45,7 @@
     "lint": "eslint . --fix --ext .ts",
     "test": "jest",
     "test:watch": "jest --watch",
-    "start": "node dist/src/main.js"
+    "start": "node dist/src/main.js",
+    "deploy:apps": "node scripts/deploy.js"
   }
 }
