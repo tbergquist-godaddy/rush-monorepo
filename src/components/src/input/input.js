@@ -22,11 +22,17 @@ export default function Input({ value, onChange, label, type = 'text' }: Props):
 const styles = create({
   label: {
     marginBottom: 'var(--space-small)',
+    color: 'var(--color-text-black)',
   },
   input: {
     borderRadius: 'var(--border-radius-normal)',
     padding: 'var(--space-normal)',
     border: '1px solid var(--color-gray-light)',
     width: '100%',
+    outline: 'none',
+    color: 'var(--color-text-black)',
+    ':focus': {
+      boxShadow: 'var(--color-primary-focus) 0px 0px 0px 0.2rem',
+    },
   },
 });

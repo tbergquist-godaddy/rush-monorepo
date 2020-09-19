@@ -1,4 +1,14 @@
 {
-  "es_PE": { "3qdkbQ": "Casa a hacer", "3wJ3WJ": "iniciar a hacer" },
-  "nb_NO": { "3qdkbQ": "Hjem å gjøre", "3wJ3WJ": "log inn å gjøre" }
+  "es_PE": {
+    "3qdkbQ": "Casa a hacer",
+    "3wJ3WJ": "iniciar a hacer",
+    "3GxHDh": "Create new account",
+    "1JyRXy": "Create account"
+  },
+  "nb_NO": {
+    "3qdkbQ": "Hjem å gjøre",
+    "3wJ3WJ": "log inn å gjøre",
+    "3GxHDh": "Create new account",
+    "1JyRXy": "Create account"
+  }
 }
