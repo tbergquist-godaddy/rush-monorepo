@@ -28,7 +28,6 @@ const styles = create({
   button: {
     padding: 'var(--space-small) var(--space-large)',
     color: 'var(--color-white)',
-    background: 'none',
     border: 'none',
     borderRadius: 'var(--border-radius-normal)',
     outline: 'none',
