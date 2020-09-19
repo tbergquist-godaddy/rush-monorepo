@@ -3,7 +3,10 @@
 import * as React from 'react';
 import { Heading, Input, FormGroup } from '@tbergq/components';
 
+import useInjectSxStyles from '../components/useInjectSxStyles';
+
 export default function Signup(): React.Node {
+  useInjectSxStyles();
   const [email, setEmail] = React.useState('test@test.no');
   const [password, setPassword] = React.useState('');
   const [confirmPassword, setConfirmPassword] = React.useState('');

@@ -6,6 +6,7 @@ import fbt from 'fbt';
 import { useQueryLoader, usePreloadedQuery, graphql } from 'react-relay/hooks';
 
 import type { homeQuery } from './__generated__/homeQuery.graphql';
+import useInjectSxStyles from '../components/useInjectSxStyles';
 
 const query = graphql`
   query homeQuery {
@@ -18,6 +19,7 @@ const query = graphql`
 `;
 
 function Content({ queryReference }) {
+  useInjectSxStyles();
   const data = usePreloadedQuery<homeQuery>(query, queryReference);
 
   return (

@@ -4,7 +4,10 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 import fbt from 'fbt';
 
+import useInjectSxStyles from '../components/useInjectSxStyles';
+
 export default function Login(): React.Node {
+  useInjectSxStyles();
   return (
     <div>
       <h1>
