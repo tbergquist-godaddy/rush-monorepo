@@ -15,7 +15,7 @@
     "get:schema": "cp ../team-assistant-gql/schema.gql ./schema.graphql"
   },
   "devDependencies": {
-    "copy-webpack-plugin": "^6.1.0",
+    "copy-webpack-plugin": "^6.1.1",
     "webpack-dev-server": "^3.11.0",
     "@adeira/babel-preset-adeira": "^1.0.0",
     "@babel/core": "^7.11.6",
@@ -26,7 +26,7 @@
     "eslint": "^7.8.1",
     "@adeira/eslint-config": "^3.1.1",
     "@tbergq/test-utils": "^0.0.1",
-    "webpack": "^4.44.1",
+    "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
     "css-loader": "^4.3.0",
     "style-loader": "^1.2.1",

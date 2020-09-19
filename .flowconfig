@@ -21,9 +21,6 @@ munge_underscores=true
 
 experimental.const_params=true
 
-types_first=true
-well_formed_exports=true
-
 [strict]
 untyped-import
 unclear-type
