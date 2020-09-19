@@ -3,7 +3,7 @@ dependencies:
   '@adeira/eslint-config': 3.1.1_aafe8ad8eb5c98f6b135821f77e79cc7
   '@adeira/fetch': 1.0.3
   '@adeira/graphql-global-id': 1.1.1_graphql@15.3.0
-  '@adeira/sx': 0.10.0
+  '@adeira/sx': 0.11.0
   '@babel/cli': 7.11.6_@babel+core@7.11.6
   '@babel/core': 7.11.6
   '@babel/plugin-proposal-numeric-separator': 7.10.4_@babel+core@7.11.6
@@ -49,6 +49,7 @@ dependencies:
   graphql-tools: 6.2.3_graphql@15.3.0
   history: 5.0.0
   html-webpack-plugin: 4.4.1_webpack@4.44.2
+  http-server: 0.12.3
   jest: 26.4.2
   jsonwebtoken: 8.5.1
   mongodb-memory-server: 6.7.6
@@ -187,7 +188,7 @@ packages:
     dev: false
     resolution:
       integrity: sha512-S3DU0pCr8l0GyWhJwDdkOZrm9fn+xxi3Q/mbpn5lUq1Uo52i7V2tJgcH1IcOskWIFYe0bFdnhT+OCZDW1aQglg==
-  /@adeira/sx/0.10.0:
+  /@adeira/sx/0.11.0:
     dependencies:
       '@adeira/js': 1.2.4
       '@adeira/murmur-hash': 0.1.0
@@ -202,8 +203,8 @@ packages:
     peerDependencies:
       react: ^16.13.1
     resolution:
-      integrity: sha512-h3DTL6yphh5V7NH+mXTC9ft7iBn1tJY1pnv+dUPLlVzhXTz5348ZgUaEM2iaEE4S8FHMxDpgmUdaXV5eFF8XzA==
-  /@adeira/sx/0.10.0_1e33bf8dad188aed5d95229096d11519:
+      integrity: sha512-tfCTgbZ9g/wlZIKzALWBnhyLwIHrUBDV2bOEB6v3ZZ4xaQC839NxSfc/FRk8uBw+RmyNiKiZiGkXF68fEz522g==
+  /@adeira/sx/0.11.0_1e33bf8dad188aed5d95229096d11519:
     dependencies:
       '@adeira/js': 1.2.4
       '@adeira/murmur-hash': 0.1.0
@@ -219,7 +220,7 @@ packages:
     peerDependencies:
       react: ^16.13.1
     resolution:
-      integrity: sha512-h3DTL6yphh5V7NH+mXTC9ft7iBn1tJY1pnv+dUPLlVzhXTz5348ZgUaEM2iaEE4S8FHMxDpgmUdaXV5eFF8XzA==
+      integrity: sha512-tfCTgbZ9g/wlZIKzALWBnhyLwIHrUBDV2bOEB6v3ZZ4xaQC839NxSfc/FRk8uBw+RmyNiKiZiGkXF68fEz522g==
   /@angular-devkit/core/10.0.7:
     dependencies:
       ajv: 6.12.3
@@ -4740,6 +4741,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-mLQ4i2QO1ytvGWFWmcngKO//JXAQueZvwEKtjgQFM4jIK0kU+ytMfplL8j+n5mspOfjHwoAg+9yhb7BwAHm36g==
+  /basic-auth/1.1.0:
+    dev: false
+    engines:
+      node: '>= 0.6'
+    resolution:
+      integrity: sha1-RSIe5Cn37h5QNb4/UVM/HN/SmIQ=
   /basic-auth/2.0.1:
     dependencies:
       safe-buffer: 5.1.2
@@ -5907,6 +5914,12 @@ packages:
       node: '>= 0.10'
     resolution:
       integrity: sha512-KIHbLJqu73RGr/hnbrO9uBeixNGuvSQjul/jdFvS/KFSIH1hWVd1ng7zOHx+YrEfInLG7q4n6GHQ9cDtxv/P6g==
+  /corser/2.0.1:
+    dev: false
+    engines:
+      node: '>= 0.4.0'
+    resolution:
+      integrity: sha1-jtolLsqrWEDc2XXOuQ2TcMgZ/4c=
   /cosmiconfig/5.2.1:
     dependencies:
       import-fresh: 2.0.0
@@ -6548,6 +6561,16 @@ packages:
     dev: false
     resolution:
       integrity: sha512-nagl3RYrbNv6kQkeJIpt6NJZy8twLB/2vtz6yN9Z4vRKHN4/QZJIEbqohALSgwKdnksuY3k5Addp5lg8sVoVcQ==
+  /ecstatic/3.3.2:
+    dependencies:
+      he: 1.2.0
+      mime: 1.6.0
+      minimist: 1.2.5
+      url-join: 2.0.5
+    dev: false
+    hasBin: true
+    resolution:
+      integrity: sha512-fLf9l1hnwrHI2xn9mEDT7KIi22UDqA2jaCwyCbSUJh9a1V+LEUSL/JO/6TIz/QyuBURWUHrFL5Kg2TtO1bkkog==
   /edit-string/1.1.6:
     dependencies:
       debug: 3.2.6
@@ -8741,6 +8764,24 @@ packages:
       node: '>=8.0.0'
     resolution:
       integrity: sha512-7mz/721AbnJwIVbnaSv1Cz3Am0ZLT/UBwkC92VlxhXv/k/BBQfM2fXElQNC27BVGr0uwUpplYPQM9LnaBMR5NQ==
+  /http-server/0.12.3:
+    dependencies:
+      basic-auth: 1.1.0
+      colors: 1.4.0
+      corser: 2.0.1
+      ecstatic: 3.3.2
+      http-proxy: 1.18.1
+      minimist: 1.2.5
+      opener: 1.5.2
+      portfinder: 1.0.28
+      secure-compare: 3.0.1
+      union: 0.5.0
+    dev: false
+    engines:
+      node: '>=6'
+    hasBin: true
+    resolution:
+      integrity: sha512-be0dKG6pni92bRjq0kvExtj/NrrAd28/8fCXkaI/4piTwQMSDSLMhWyW0NI1V+DBI3aa1HMlQu46/HjVLfmugA==
   /http-signature/1.2.0:
     dependencies:
       assert-plus: 1.0.0
@@ -11562,6 +11603,11 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-IFenVPgF70fSm1keSd2iDBIDIBZkroLeuffXq+wKTzTJlBpesFWojV9lb8mzOfaAzM1sr7HQHuO0vtV0zYekGg==
+  /opener/1.5.2:
+    dev: false
+    hasBin: true
+    resolution:
+      integrity: sha512-ur5UIdyw5Y7yEj9wLzhqXiy6GZ3Mwx0yGI+5sMn2r0N0v3cKJvUmFH5yPP+WXh9e0xfyzyJX95D8l088DNFj7A==
   /opn/3.0.3:
     dependencies:
       object-assign: 4.1.1
@@ -13263,6 +13309,10 @@ packages:
       node: '>= 8.9.0'
     resolution:
       integrity: sha512-SHiNtMOUGWBQJwzISiVYKu82GiV4QYGePp3odlY1tuKO7gPtphAT5R/py0fA6xtbgLL/RvtJZnU9b8s0F1q0Xg==
+  /secure-compare/3.0.1:
+    dev: false
+    resolution:
+      integrity: sha1-8aAymzCLIh+uN7mXTz1XjQypmeM=
   /select-hose/2.0.0:
     dev: false
     resolution:
@@ -14783,6 +14833,14 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-tJfXmxMeWYnczCVs7XAEvIV7ieppALdyepWMkHkwciRpZraG/xwT+s2JN8+pr1+8jCRf80FFzvr+MpQeeoF4Xg==
+  /union/0.5.0:
+    dependencies:
+      qs: 6.9.4
+    dev: false
+    engines:
+      node: '>= 0.8.0'
+    resolution:
+      integrity: sha512-N6uOhuW6zO95P3Mel2I2zMsbsanvvtgn6jVqJv4vbVcz/JN0OkL9suomjQGmWtxJQXOCqUJvquc1sMeNz/IwlA==
   /uniq/1.0.1:
     dev: false
     resolution:
@@ -14895,6 +14953,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-2pN/emLiH+wf0Y1Js1wpNQZ6bHI=
+  /url-join/2.0.5:
+    dev: false
+    resolution:
+      integrity: sha1-WvIvGMBSoACkjXuCxenC4v7tpyg=
   /url-parse-lax/3.0.0:
     dependencies:
       prepend-http: 2.0.0
@@ -15693,7 +15755,7 @@ packages:
     dependencies:
       '@adeira/babel-preset-adeira': 1.0.0_@babel+core@7.11.6
       '@adeira/eslint-config': 3.1.1_aafe8ad8eb5c98f6b135821f77e79cc7
-      '@adeira/sx': 0.10.0_1e33bf8dad188aed5d95229096d11519
+      '@adeira/sx': 0.11.0_1e33bf8dad188aed5d95229096d11519
       '@babel/cli': 7.11.6_@babel+core@7.11.6
       '@babel/core': 7.11.6
       '@babel/plugin-proposal-class-properties': 7.10.4_@babel+core@7.11.6
@@ -15715,7 +15777,7 @@ packages:
       eslint: '*'
       typescript: '*'
     resolution:
-      integrity: sha512-yeX7FlwcZzx1C3KmUC4x6dYUkT+aQMXCob6xgs0Qp2spEUY6AY6+N8ztawbmqtopEgZ7/0MkD0SSFxsRGaZR0w==
+      integrity: sha512-n1faPtWVUl7xNK0ys321PW+WXg0RCsf1f2cVZhVKj3ZlbBG1VCppOXClWkvAxabCG+vzxkpH3xnPhgm8l08MZQ==
       tarball: 'file:projects/components.tgz'
     version: 0.0.0
   'file:projects/eslint-config.tgz_ed198e9d9902707943ffb1684285aade':
@@ -15792,7 +15854,7 @@ packages:
       '@adeira/babel-preset-adeira': 1.0.0_@babel+core@7.11.6
       '@adeira/eslint-config': 3.1.1_aafe8ad8eb5c98f6b135821f77e79cc7
       '@adeira/fetch': 1.0.3
-      '@adeira/sx': 0.10.0_1e33bf8dad188aed5d95229096d11519
+      '@adeira/sx': 0.11.0_1e33bf8dad188aed5d95229096d11519
       '@babel/core': 7.11.6
       '@babel/plugin-proposal-class-properties': 7.10.4_@babel+core@7.11.6
       '@babel/plugin-proposal-numeric-separator': 7.10.4_@babel+core@7.11.6
@@ -15816,6 +15878,7 @@ packages:
       graphql: 15.3.0
       history: 5.0.0
       html-webpack-plugin: 4.4.1_webpack@4.44.2
+      http-server: 0.12.3
       jest: 26.4.2
       react: 0.0.0-experimental-94c0244ba
       react-dom: 0.0.0-experimental-94c0244ba_1e33bf8dad188aed5d95229096d11519
@@ -15835,7 +15898,7 @@ packages:
     peerDependencies:
       typescript: '*'
     resolution:
-      integrity: sha512-fyomc4P4oosehAZq6eOwQ+f/bCs8xvSAnpcfP0XcYYS3egBv2trwt44P1O4Pi8+6ib4lwKezcqyQk1aggMWvJQ==
+      integrity: sha512-MnaJQz0oxhlh8sYsAdxONrRLl7tgLJT1uX+rN9XT3ddJ1y54iMZ2Ws8q8NG+cV0bo/agzzfGYGeI00cAahqKwg==
       tarball: 'file:projects/team-assistant.tgz'
     version: 0.0.0
   'file:projects/test-utils.tgz':
@@ -15864,7 +15927,7 @@ specifiers:
   '@adeira/eslint-config': ^3.1.1
   '@adeira/fetch': ^1.0.3
   '@adeira/graphql-global-id': ^1.1.1
-  '@adeira/sx': ^0.10.0
+  '@adeira/sx': ^0.11.0
   '@babel/cli': ^7.11.6
   '@babel/core': ^7.11.6
   '@babel/plugin-proposal-numeric-separator': ^7.10.4
@@ -15910,6 +15973,7 @@ specifiers:
   graphql-tools: ^6.2.3
   history: ^5.0.0
   html-webpack-plugin: ^4.4.1
+  http-server: ^0.12.3
   jest: ^26.4.2
   jsonwebtoken: ^8.5.1
   mongodb-memory-server: ^6.7.6
