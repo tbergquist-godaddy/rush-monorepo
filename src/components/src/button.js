@@ -5,18 +5,42 @@ import { create } from '@adeira/sx';
 
 type Props = {
   +children: React.Node,
+  +variant?: 'primary' | 'secondary',
+  +type?: 'button' | 'submit',
 };
 
-export default function Button({ children }: Props): React.Node {
+export default function Button({
+  children,
+  variant = 'primary',
+  type = 'button',
+}: Props): React.Node {
   return (
-    <button type="button" className={styles('button')}>
-      {children}
-    </button>
+    <>
+      {/* eslint-disable-next-line react/button-has-type */}
+      <button type={type} className={styles('button', variant)}>
+        {children}
+      </button>
+    </>
   );
 }
 
 const styles = create({
   button: {
-    color: 'blue',
+    padding: 'var(--space-small) var(--space-large)',
+    color: 'var(--color-white)',
+    background: 'none',
+    border: 'none',
+    borderRadius: 'var(--border-radius-normal)',
+    outline: 'none',
+    fontWeight: 500,
+    ':focus': {
+      boxShadow: 'var(--color-primary-focus) 0px 0px 0px 0.2rem',
+    },
+  },
+  primary: {
+    backgroundColor: 'var(--color-primary)',
+  },
+  secondary: {
+    backgroundColor: 'var(--color-secondary)',
   },
 });

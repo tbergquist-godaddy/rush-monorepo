@@ -1,10 +1,17 @@
 :root {
   --border-radius-normal: 3px;
 
+  --ming: #006d77ff;
+  --middle-blue-green: #83c5beff;
+  --alice-blue: #edf6f9ff;
+  --unbleached-silk: #ffddd2ff;
+  --dark-salmon: #e29578ff;
   --color-gray-light: #dddada;
-  --color-primary: #145a14;
+  --color-primary: var(--ming);
+  --color-secondary: var(--dark-salmon);
   --color-text-black: #1f1c1c;
   --color-white: #fff;
+  --color-primary-focus: rgba(0, 109, 119, 0.5);
 
   --space-x-small: 4px;
   --space-small: 8px;

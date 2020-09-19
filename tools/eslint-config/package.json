@@ -7,7 +7,7 @@
     "@tbergq/test-utils": "^0.0.1"
   },
   "dependencies": {
-    "eslint": "^7.8.1",
+    "eslint": "^7.9.0",
     "@adeira/eslint-config": "^3.1.1",
     "jest": "^26.4.2"
   },

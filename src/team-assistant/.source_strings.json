@@ -5,9 +5,9 @@
         "eRm64b0dkVt+121lfW8YVg==": "Home TODO"
       },
       "filepath": "src/home/home.js",
-      "line_beg": 26,
+      "line_beg": 28,
       "col_beg": 8,
-      "line_end": 26,
+      "line_end": 28,
       "col_end": 45,
       "desc": "Todo text",
       "project": "",
@@ -19,14 +19,42 @@
         "HzzziAk+1+ABS+lI7SSccw==": "login TODO"
       },
       "filepath": "src/login/login.js",
-      "line_beg": 11,
+      "line_beg": 14,
       "col_beg": 8,
-      "line_end": 11,
+      "line_end": 14,
       "col_end": 47,
       "desc": "login todo",
       "project": "",
       "type": "text",
       "jsfbt": "login TODO"
+    },
+    {
+      "hashToText": {
+        "RTXk2CZMwYWz7IdwwRWtWA==": "Create new account"
+      },
+      "filepath": "src/signup/signup.js",
+      "line_beg": 18,
+      "col_beg": 8,
+      "line_end": 18,
+      "col_end": 69,
+      "desc": "Create new account title",
+      "project": "",
+      "type": "text",
+      "jsfbt": "Create new account"
+    },
+    {
+      "hashToText": {
+        "Bj8LytiFxhN5wlPx0jel9g==": "Create account"
+      },
+      "filepath": "src/signup/signup.js",
+      "line_beg": 41,
+      "col_beg": 10,
+      "line_end": 41,
+      "col_end": 77,
+      "desc": "Submit button to create an account",
+      "project": "",
+      "type": "text",
+      "jsfbt": "Create account"
     }
   ],
   "childParentMappings": {}

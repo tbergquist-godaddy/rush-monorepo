@@ -21,7 +21,8 @@
     "@babel/plugin-transform-flow-strip-types": "^7.10.4",
     "@babel/plugin-transform-runtime": "^7.11.5",
     "@babel/preset-env": "^7.11.5",
-    "@babel/preset-react": "^7.10.4"
+    "@babel/preset-react": "^7.10.4",
+    "eslint": "^7.9.0"
   },
   "scripts": {
     "build:dev": "babel src --out-dir dist/ --out-file-extension .mjs --watch --copy-files",
