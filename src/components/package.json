@@ -22,13 +22,21 @@
     "@babel/plugin-transform-runtime": "^7.11.5",
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
-    "eslint": "^7.9.0"
+    "eslint": "^7.9.0",
+    "@testing-library/react": "^11.0.4",
+    "@tbergq/test-utils": "^0.0.1",
+    "rimraf": "^3.0.2",
+    "@testing-library/user-event": "^12.1.5"
   },
   "scripts": {
-    "build:dev": "babel src --out-dir dist/ --out-file-extension .mjs --watch --copy-files",
-    "build": "babel src --out-dir dist/ --copy-files && babel src --out-dir dist/ --out-file-extension .mjs && babel src --out-dir dist/ --out-file-extension .js.flow",
+    "build:base": "babel src --out-dir dist/ --ignore \"**/*.test.js\" --no-copy-ignored",
+    "build:dev": "rushx build:mjs --watch",
+    "build:cjs": "rushx build:base",
+    "build:mjs": "rushx build:base --out-file-extension .mjs --copy-files",
+    "build:flow": "rushx build:base --out-file-extension .js.flow",
+    "build": "rimraf dist && rushx build:cjs && rushx build:mjs && rushx build:flow",
     "lint": "eslint . --fix",
-    "test": ""
+    "test": "jest"
   },
   "dependencies": {
     "@babel/runtime": "^7.11.2",
