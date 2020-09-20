@@ -23,6 +23,9 @@ import getLanguage from './get-language';
       },
     },
   };
+  const locale = locales[getLanguage()];
 
-  setLocale(locales[getLanguage()]);
+  if (locale != null) {
+    setLocale(locales[getLanguage()]);
+  }
 })();
