@@ -4,17 +4,19 @@ import * as React from 'react';
 import { create } from '@adeira/sx';
 
 type Props = {
-  +value: string,
-  +onChange: (SyntheticEvent<HTMLInputElement>) => void,
+  +value?: string,
+  +onChange?: (SyntheticEvent<HTMLInputElement>) => void,
   +label: React.Node,
   +type?: 'text' | 'password',
+  +name: string,
+  +defaultValue?: string,
 };
 
-export default function Input({ value, onChange, label, type = 'text' }: Props): React.Node {
+function Input({ label, type = 'text', ...rest }: Props, ref): React.Node {
   return (
     <label>
       <div className={styles('label')}>{label}</div>
-      <input className={styles('input')} type={type} value={value} onChange={onChange} />
+      <input {...rest} className={styles('input')} type={type} ref={ref} />
     </label>
   );
 }
@@ -36,3 +38,5 @@ const styles = create({
     },
   },
 });
+
+export default (React.forwardRef(Input): React.ComponentType<Props>);

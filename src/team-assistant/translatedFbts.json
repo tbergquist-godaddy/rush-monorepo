@@ -2,13 +2,21 @@
   "es_PE": {
     "3qdkbQ": "Casa a hacer",
     "3wJ3WJ": "iniciar a hacer",
-    "3GxHDh": "Create new account",
-    "1JyRXy": "Create account"
+    "3v4cdj": "correo",
+    "3PDIMj": "contraseña",
+    "1uYKrq": "confirmar contraseña",
+    "239Icc": "Las contraseñas deben coincidir",
+    "3GxHDh": "Crear nueva cuenta",
+    "1JyRXy": "Crear cuenta"
   },
   "nb_NO": {
     "3qdkbQ": "Hjem å gjøre",
     "3wJ3WJ": "log inn å gjøre",
-    "3GxHDh": "Create new account",
-    "1JyRXy": "Create account"
+    "3v4cdj": "epost",
+    "3PDIMj": "passord",
+    "1uYKrq": "bekreftet passord",
+    "239Icc": "Passordene må samsvare",
+    "3GxHDh": "Opprett ny konto",
+    "1JyRXy": "Opprett konto"
   }
 }

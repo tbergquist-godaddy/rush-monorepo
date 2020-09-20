@@ -11,6 +11,7 @@ dependencies:
   '@babel/plugin-transform-flow-strip-types': 7.10.4_@babel+core@7.11.6
   '@babel/preset-react': 7.10.4_@babel+core@7.11.6
   '@babel/runtime': 7.11.2
+  '@hookform/resolvers': 0.1.1_react-hook-form@6.8.3
   '@jest/reporters': 26.4.1
   '@nestjs/cli': 7.5.1_webpack-cli@3.3.12
   '@nestjs/common': 7.4.4_0c773f197e7bb0df0bedc332ad8bc35d
@@ -59,6 +60,7 @@ dependencies:
   mongoose: 5.10.6_mongoose@5.10.6
   morgan: 1.10.0
   react-dom: 0.0.0-experimental-94c0244ba
+  react-hook-form: 6.8.3
   react-relay: 0.0.0-experimental-183bdd28
   react-router-dom: 0.0.0-experimental-ffd8c7d0_972173fe62c7304df69699d16b858068
   reflect-metadata: 0.1.13
@@ -75,6 +77,7 @@ dependencies:
   webpack: 4.44.2_93ca2875a658e9d1552850624e6b91c7
   webpack-cli: 3.3.12_webpack@4.44.2
   webpack-dev-server: 3.11.0_93ca2875a658e9d1552850624e6b91c7
+  yup: 0.29.3
 lockfileVersion: 5.1
 packages:
   /@adeira/babel-preset-adeira/1.0.0_@babel+core@7.11.6:
@@ -2321,6 +2324,14 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-ejkFkhE2smZpeaD4a7TwYvZX95M=
+  /@hookform/resolvers/0.1.1_react-hook-form@6.8.3:
+    dependencies:
+      react-hook-form: 6.8.3
+    dev: false
+    peerDependencies:
+      react-hook-form: '>=6.6.0'
+    resolution:
+      integrity: sha512-IKWcvDG82D0N+3ZjMSbdHul6TgL2Dd68aXyijLvc1mUCzBChvQwS6YDsXRrc9WuIjUPb9nluaVIIrmg3V1JMGQ==
   /@istanbuljs/load-nyc-config/1.1.0:
     dependencies:
       camelcase: 5.3.1
@@ -7855,6 +7866,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-3Z4XhFZ3992uIq0XOqb9AreonueSYphE6oYbpt5+3u06JWklbsPkNv3ZKkP9Bz/r+1MWCaMoSQ28P85+1Yc77w==
+  /fn-name/3.0.0:
+    dev: false
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-eNMNr5exLoavuAMhIUVsOKF79SWd/zG104ef6sxBTSw+cZc6BXdQXDvYcGvp0VbxVVSp1XDUNoz7mg1xMtSznA==
   /follow-redirects/1.13.0:
     dev: false
     engines:
@@ -10550,6 +10567,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-cvbTwETRfsFh4nHsL1eGWapU1XFi5Ot9E85sWAwia7Y7EgB7vfqcZhTKZ+l7hCGxSPoushMv5GKhT5PdLv03WA==
+  /lodash-es/4.17.15:
+    dev: false
+    resolution:
+      integrity: sha512-rlrc3yU3+JNOpZ9zj5pQtxnx2THmvRykwL4Xlxoa8I9lHBlVbbyPhgyPMioxVZ4NqyxaVVtaJnzsyOidQIhyyQ==
   /lodash._reinterpolate/3.0.0:
     dev: false
     resolution:
@@ -12499,6 +12520,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
+  /property-expr/2.0.4:
+    dev: false
+    resolution:
+      integrity: sha512-sFPkHQjVKheDNnPvotjQmm3KD3uk1fWKUN7CrpdbwmUx3CrG3QiM8QpTSimvig5vTXmTvjz7+TDvXOI9+4rkcg==
   /proxy-addr/2.0.6:
     dependencies:
       forwarded: 0.1.2
@@ -12687,6 +12712,20 @@ packages:
       react: 0.0.0-experimental-94c0244ba
     resolution:
       integrity: sha512-rvyWGIxrtjImQaeo3/27ORpU5i7fTzPlQH/xkEI/wlLfuJ2zi7Tideln8y9xM2BA5mYA74sH103bMbIQbPWtGQ==
+  /react-hook-form/6.8.3:
+    dev: false
+    peerDependencies:
+      react: ^16.8.0
+    resolution:
+      integrity: sha512-IsYcATD4fodv9BiwWBwiBHE50+IyvhpPTi+jIab4fQZLbDPJnN7YXnJ+/2oMXDJ94n+PnUs4wklr9pg8TNdOrQ==
+  /react-hook-form/6.8.3_1e33bf8dad188aed5d95229096d11519:
+    dependencies:
+      react: 0.0.0-experimental-94c0244ba
+    dev: false
+    peerDependencies:
+      react: ^16.8.0
+    resolution:
+      integrity: sha512-IsYcATD4fodv9BiwWBwiBHE50+IyvhpPTi+jIab4fQZLbDPJnN7YXnJ+/2oMXDJ94n+PnUs4wklr9pg8TNdOrQ==
   /react-is/16.13.1:
     dev: false
     resolution:
@@ -14344,6 +14383,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==
+  /synchronous-promise/2.0.13:
+    dev: false
+    resolution:
+      integrity: sha512-R9N6uDkVsghHePKh1TEqbnLddO2IY25OcsksyFp/qBe7XYd0PVbKEWxhcdMhpLzE1I6skj5l4aEZ3CRxcbArlA==
   /table/5.4.6:
     dependencies:
       ajv: 6.12.5
@@ -14656,6 +14699,10 @@ packages:
       node: '>=0.6'
     resolution:
       integrity: sha512-yaOH/Pk/VEhBWWTlhI+qXxDFXlejDGcQipMlyxda9nthulaxLZUNcUqFxokp0vcYnvteJln5FNQDRrxj3YcbVw==
+  /toposort/2.0.2:
+    dev: false
+    resolution:
+      integrity: sha1-riF2gXXRVZ1IvvNUILL0li8JwzA=
   /tough-cookie/2.5.0:
     dependencies:
       psl: 1.8.0
@@ -15869,6 +15916,20 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-Ux4ygGWsu2c7isFWe8Yu1YluJmqVhxqK2cLXNQA5AcC3QfbGNpM7fu0Y8b/z16pXLnFxZYvWhd3fhBY9DLmC6Q==
+  /yup/0.29.3:
+    dependencies:
+      '@babel/runtime': 7.11.2
+      fn-name: 3.0.0
+      lodash: 4.17.20
+      lodash-es: 4.17.15
+      property-expr: 2.0.4
+      synchronous-promise: 2.0.13
+      toposort: 2.0.2
+    dev: false
+    engines:
+      node: '>=10'
+    resolution:
+      integrity: sha512-RNUGiZ/sQ37CkhzKFoedkeMfJM0vNQyaz+wRZJzxdKE7VfDeVKH8bb4rr7XhRLbHJz5hSjoDNwMEIaKhuMZ8gQ==
   /zen-observable-ts/0.8.21:
     dependencies:
       tslib: 1.13.0
@@ -15998,6 +16059,7 @@ packages:
       '@babel/preset-env': 7.11.5_@babel+core@7.11.6
       '@babel/preset-react': 7.10.4_@babel+core@7.11.6
       '@babel/runtime': 7.11.2
+      '@hookform/resolvers': 0.1.1_react-hook-form@6.8.3
       babel-eslint: 10.1.0_eslint@7.9.0
       babel-loader: 8.1.0_d2a654c8b7ff226093b38eb7b56a78a8
       babel-plugin-fbt: 0.15.1
@@ -16015,6 +16077,7 @@ packages:
       jest: 26.4.2
       react: 0.0.0-experimental-94c0244ba
       react-dom: 0.0.0-experimental-94c0244ba_1e33bf8dad188aed5d95229096d11519
+      react-hook-form: 6.8.3_1e33bf8dad188aed5d95229096d11519
       react-relay: 0.0.0-experimental-183bdd28_1e33bf8dad188aed5d95229096d11519
       react-router-dom: 0.0.0-experimental-ffd8c7d0_e72e51c6c330f525f1ecdad34bc9192b
       relay-compiler: 10.0.1_graphql@15.3.0
@@ -16025,13 +16088,14 @@ packages:
       webpack: 4.44.2_93ca2875a658e9d1552850624e6b91c7
       webpack-cli: 3.3.12_webpack@4.44.2
       webpack-dev-server: 3.11.0_93ca2875a658e9d1552850624e6b91c7
+      yup: 0.29.3
     dev: false
     id: 'file:projects/team-assistant.tgz'
     name: '@rush-temp/team-assistant'
     peerDependencies:
       typescript: '*'
     resolution:
-      integrity: sha512-M628/k1rT1ozgqzLYAUt+tS+bKlyXmhvCSvs4N+Mm2D6D/kHXBUGkF1TPP2/JJkXffctQdh0LKwmEh4PBWiKGA==
+      integrity: sha512-Hx4tIHfzqA5GfWuriFYUJNCgBuJGr0LMhOR/DPGCkPp6vhJ0sPHtcZWeYXOpbR37T+J6yoKuaibDtLZA2DJfXg==
       tarball: 'file:projects/team-assistant.tgz'
     version: 0.0.0
   'file:projects/test-utils.tgz':
@@ -16069,6 +16133,7 @@ specifiers:
   '@babel/plugin-transform-flow-strip-types': ^7.10.4
   '@babel/preset-react': ^7.10.4
   '@babel/runtime': ^7.11.2
+  '@hookform/resolvers': ^0.1.1
   '@jest/reporters': ^26.4.1
   '@nestjs/cli': ^7.5.1
   '@nestjs/common': ^7.4.4
@@ -16117,6 +16182,7 @@ specifiers:
   mongoose: ^5.10.6
   morgan: ^1.10.0
   react-dom: 0.0.0-experimental-94c0244ba
+  react-hook-form: ^6.8.3
   react-relay: 0.0.0-experimental-183bdd28
   react-router-dom: 0.0.0-experimental-ffd8c7d0
   reflect-metadata: ^0.1.13
@@ -16133,3 +16199,4 @@ specifiers:
   webpack: ^4.44.2
   webpack-cli: ^3.3.12
   webpack-dev-server: ^3.11.0
+  yup: ^0.29.3
