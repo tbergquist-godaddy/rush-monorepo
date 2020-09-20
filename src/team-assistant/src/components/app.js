@@ -10,20 +10,8 @@ import { RelayEnvironmentProvider } from 'react-relay/hooks';
 import translations from '../../translatedFbts.json';
 import Routes from './router';
 import environment from '../relay/environment';
-
-function getLanguage() {
-  if (navigator.language.startsWith('es')) {
-    return 'es_PE';
-  }
-  switch (navigator.language) {
-    case 'nb':
-    case 'no':
-    case 'nb-NO':
-      return 'nb_NO';
-    default:
-      return 'en_US';
-  }
-}
+import getLanguage from './get-language';
+import './yup-locale';
 
 export default function App(): React.Node {
   React.useEffect(() => {

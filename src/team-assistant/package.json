@@ -61,6 +61,9 @@
     "react-relay": "0.0.0-experimental-183bdd28",
     "relay-runtime": "^10.0.1",
     "history": "^5.0.0",
-    "@adeira/fetch": "^1.0.3"
+    "@adeira/fetch": "^1.0.3",
+    "react-hook-form": "^6.8.3",
+    "yup": "^0.29.3",
+    "@hookform/resolvers": "^0.1.1"
   }
 }

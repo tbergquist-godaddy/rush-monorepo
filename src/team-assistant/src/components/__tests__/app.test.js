@@ -5,6 +5,8 @@ import { render } from 'react-dom';
 
 import App from '../app';
 
+jest.mock('../yup-locale.js', () => jest.fn());
+
 let screen;
 
 beforeEach(() => {

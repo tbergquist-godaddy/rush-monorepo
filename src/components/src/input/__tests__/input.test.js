@@ -8,7 +8,7 @@ import Input from '../input';
 
 it('calls the onchange callback', () => {
   const onChange = jest.fn();
-  render(<Input value="test value" label="Label" onChange={onChange} />);
+  render(<Input name="test" value="test value" label="Label" onChange={onChange} />);
 
   const input = screen.getByRole('textbox');
   expect(input).toHaveValue('test value');
