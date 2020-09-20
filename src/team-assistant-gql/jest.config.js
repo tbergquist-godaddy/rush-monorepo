@@ -1,6 +1,6 @@
 module.exports = {
   rootDir: __dirname,
-  preset: '@tbergq/test-utils',
+  preset: './node_modules/@tbergq/test-utils/preset-base.js',
   moduleFileExtensions: ['js', 'json', 'ts'],
   testEnvironment: 'node',
   transform: {

@@ -7,17 +7,19 @@ type Props = {
   +children: React.Node,
   +variant?: 'primary' | 'secondary',
   +type?: 'button' | 'submit',
+  +onClick?: () => void,
 };
 
 export default function Button({
   children,
   variant = 'primary',
   type = 'button',
+  ...rest
 }: Props): React.Node {
   return (
     <>
       {/* eslint-disable-next-line react/button-has-type */}
-      <button type={type} className={styles('button', variant)}>
+      <button type={type} className={styles('button', variant)} {...rest}>
         {children}
       </button>
     </>

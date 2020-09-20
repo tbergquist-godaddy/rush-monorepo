@@ -19,7 +19,7 @@ module.exports = {
     'import/no-extraneous-dependencies': [
       ERROR,
       {
-        devDependencies: ['babel.config.js'],
+        devDependencies: ['babel.config.js', '**/__tests__/**'],
       },
     ],
   },
