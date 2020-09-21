@@ -1,7 +1,7 @@
 // @flow
 
 import * as React from 'react';
-import { Heading, Input, FormGroup, Button } from '@tbergq/components';
+import { Heading, Input, FormGroup, Button, useShowToast } from '@tbergq/components';
 import fbt from 'fbt';
 import * as sx from '@adeira/sx';
 import { graphql, useMutation } from 'react-relay/hooks';
@@ -33,6 +33,7 @@ const schema = object().shape({
 
 export default function Signup(): React.Node {
   const navigate = useNavigate();
+  const showToast = useShowToast();
   const { register, handleSubmit, errors } = useForm({
     resolver: yupResolver(schema),
   });
@@ -44,8 +45,8 @@ export default function Signup(): React.Node {
         ... on Identity {
           __typename
         }
-        ... on Error {
-          message
+        ... on CreateAccountError {
+          reason
         }
       }
     }
@@ -55,10 +56,16 @@ export default function Signup(): React.Node {
     signUp({
       variables: { password, email },
       onCompleted: (res, err) => {
-        if (res.createAccount.message != null || err != null) {
-          // eslint-disable-next-line no-alert
-          alert('fail');
+        const reason = res.createAccount.reason;
+        if (reason != null || err != null) {
+          showToast({
+            text: reason === 'EMAIL_EXISTS' ? 'Email already exists' : 'Fail',
+            type: 'danger',
+          });
         } else {
+          showToast({
+            text: 'Account created successfully',
+          });
           navigate('/login');
         }
       },
