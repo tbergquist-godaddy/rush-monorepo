@@ -39,7 +39,7 @@ it('validates form', async () => {
   expect(screen.getByText('"password" is a required field')).toBeInTheDocument();
   expect(screen.getByText('"confirm password" is a required field')).toBeInTheDocument();
 
-  const emailInput = screen.getByLabelText('email');
+  const emailInput = screen.getByLabelText(/email/);
   userEvent.type(emailInput, 'test');
 
   userEvent.click(button);
@@ -50,10 +50,10 @@ it('validates form', async () => {
 
   expect(screen.getByText('"email" must be a valid email')).toBeInTheDocument();
 
-  const passwordInput = screen.getByLabelText(/^password$/);
+  const passwordInput = screen.getByLabelText(/^password/);
   userEvent.type(passwordInput, '123');
 
-  const confirmPassword = screen.getByLabelText('confirm password');
+  const confirmPassword = screen.getByLabelText(/confirm password/);
   userEvent.type(confirmPassword, '321');
 
   userEvent.click(button);
