@@ -17,3 +17,18 @@ it('calls the onchange callback', () => {
 
   expect(onChange).toHaveBeenCalledWith(expect.any(Object));
 });
+
+it('shows errors', () => {
+  const onChange = jest.fn();
+  render(
+    <Input
+      error="This is an error"
+      name="test"
+      value="test value"
+      label="Label"
+      onChange={onChange}
+    />,
+  );
+
+  expect(screen.getByText('This is an error')).toBeInTheDocument();
+});

@@ -66,18 +66,30 @@ export default function Signup(): React.Node {
   };
 
   return (
-    <form action="#" noValidate onSubmit={handleSubmit(onSubmit)}>
+    <form action="#" onSubmit={handleSubmit(onSubmit)}>
       <Heading level="h1">
         <fbt desc="Create new account title">Create new account</fbt>
       </Heading>
-      <FormGroup error={errors.email?.message}>
-        <Input ref={register} name="email" label={email} />
+      <FormGroup>
+        <Input ref={register} name="email" label={email} error={errors.email?.message} />
       </FormGroup>
-      <FormGroup error={errors.password?.message}>
-        <Input type="password" label={password} name="password" ref={register} />
+      <FormGroup>
+        <Input
+          type="password"
+          label={password}
+          name="password"
+          ref={register}
+          error={errors.password?.message}
+        />
       </FormGroup>
-      <FormGroup error={errors.confirmPassword?.message}>
-        <Input type="password" label={confirmPassword} name="confirmPassword" ref={register} />
+      <FormGroup>
+        <Input
+          type="password"
+          label={confirmPassword}
+          name="confirmPassword"
+          ref={register}
+          error={errors.confirmPassword?.message}
+        />
       </FormGroup>
       <div className={styles('buttonContainer')}>
         <Button type="submit">

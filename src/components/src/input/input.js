@@ -10,13 +10,25 @@ type Props = {
   +type?: 'text' | 'password',
   +name: string,
   +defaultValue?: string,
+  +error?: ?string,
 };
 
-function Input({ label, type = 'text', ...rest }: Props, ref): React.Node {
+function Input({ label, type = 'text', error, ...rest }: Props, ref): React.Node {
+  const hasError = error != null && error !== '';
   return (
     <label>
       <div className={styles('label')}>{label}</div>
-      <input {...rest} className={styles('input')} type={type} ref={ref} />
+      <input
+        {...rest}
+        className={styles('input', hasError && 'inputError')}
+        type={type}
+        ref={ref}
+      />
+      {error != null && (
+        <div aria-live="polite" className={styles('error')}>
+          {error}
+        </div>
+      )}
     </label>
   );
 }
@@ -36,6 +48,17 @@ const styles = create({
     ':focus': {
       boxShadow: 'var(--color-primary-focus) 0px 0px 0px 0.2rem',
     },
+  },
+  inputError: {
+    border: '1px solid var(--color-error)',
+    ':focus': {
+      boxShadow: 'var(--color-error) 0px 0px 0px 0.2rem',
+    },
+  },
+  error: {
+    color: 'var(--color-error)',
+    fontSize: 'var(--text-size-small)',
+    lineHeight: 1.75,
   },
 });
 
