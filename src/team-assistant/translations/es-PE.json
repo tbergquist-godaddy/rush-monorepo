@@ -61,6 +61,36 @@
         }
       ]
     },
+    "sb0jct6xd9XbxiDdEP4fNQ==": {
+      "tokens": [],
+      "types": [],
+      "translations": [
+        {
+          "translation": "El correo electrónico ya existe",
+          "variations": []
+        }
+      ]
+    },
+    "3VU2URsW5m1ZGMbBzJ9srw==": {
+      "tokens": [],
+      "types": [],
+      "translations": [
+        {
+          "translation": "Error al crear la cuenta, por favor actualiza la página o vuelve a intentarlo más tarde",
+          "variations": []
+        }
+      ]
+    },
+    "Hvoxrx1yMCVLZfBZDvxoaQ==": {
+      "tokens": [],
+      "types": [],
+      "translations": [
+        {
+          "translation": "Cuenta creada correctamente",
+          "variations": []
+        }
+      ]
+    },
     "RTXk2CZMwYWz7IdwwRWtWA==": {
       "tokens": [],
       "types": [],

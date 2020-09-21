@@ -5,7 +5,7 @@
     "flow-bin": "^0.134.0"
   },
   "scripts": {
-    "typecheck": "flow",
+    "typecheck": "flow --max-warnings=0",
     "build": ""
   }
 }
