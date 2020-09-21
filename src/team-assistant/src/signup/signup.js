@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import { Heading, Input, FormGroup, Button, useShowToast } from '@tbergq/components';
-import fbt from 'fbt';
+import { fbt } from 'fbt';
 import * as sx from '@adeira/sx';
 import { graphql, useMutation } from 'react-relay/hooks';
 import { useForm } from 'react-hook-form';
@@ -13,13 +13,9 @@ import { useNavigate } from 'react-router-dom';
 import useInjectSxStyles from '../components/useInjectSxStyles';
 import type { signupMutation as SignupMutation } from './__generated__/signupMutation.graphql';
 
-// $FlowFixMe[prop-missing]
 const email = fbt('email', 'email form label');
-// $FlowFixMe[prop-missing]
 const password = fbt('password', 'password form label');
-// $FlowFixMe[prop-missing]
 const confirmPassword = fbt('confirm password', 'confirmPassword form label');
-// $FlowFixMe[prop-missing]
 const passwordsMustMatch = fbt('Passwords must match', 'password mismatch error message');
 
 const schema = object().shape({
@@ -59,12 +55,21 @@ export default function Signup(): React.Node {
         const reason = res.createAccount.reason;
         if (reason != null || err != null) {
           showToast({
-            text: reason === 'EMAIL_EXISTS' ? 'Email already exists' : 'Fail',
+            text:
+              reason === 'EMAIL_EXISTS'
+                ? fbt('Email already exists', 'notification that email exists')
+                : fbt(
+                    'Failed to create account, please refresh the page or try again later',
+                    'notification about unknown create error',
+                  ),
             type: 'danger',
           });
         } else {
           showToast({
-            text: 'Account created successfully',
+            text: fbt(
+              'Account created successfully',
+              'notification that account creation was successful',
+            ),
           });
           navigate('/login');
         }

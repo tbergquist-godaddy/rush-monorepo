@@ -33,9 +33,9 @@
         "7CIgyAEAEGPlyX0S/F7DwA==": "email"
       },
       "filepath": "src/signup/signup.js",
-      "line_beg": 17,
+      "line_beg": 16,
       "col_beg": 14,
-      "line_end": 17,
+      "line_end": 16,
       "col_end": 46,
       "desc": "email form label",
       "project": "",
@@ -47,9 +47,9 @@
         "Ub0eS5osOE0tKiy8EIVbtw==": "password"
       },
       "filepath": "src/signup/signup.js",
-      "line_beg": 19,
+      "line_beg": 17,
       "col_beg": 17,
-      "line_end": 19,
+      "line_end": 17,
       "col_end": 55,
       "desc": "password form label",
       "project": "",
@@ -61,9 +61,9 @@
         "AWUuyxzzoQu78RlOEqCWyQ==": "confirm password"
       },
       "filepath": "src/signup/signup.js",
-      "line_beg": 21,
+      "line_beg": 18,
       "col_beg": 24,
-      "line_end": 21,
+      "line_end": 18,
       "col_end": 77,
       "desc": "confirmPassword form label",
       "project": "",
@@ -75,9 +75,9 @@
         "KnEPm5DgOVgVY59Qh3d5qA==": "Passwords must match"
       },
       "filepath": "src/signup/signup.js",
-      "line_beg": 23,
+      "line_beg": 19,
       "col_beg": 27,
-      "line_end": 23,
+      "line_end": 19,
       "col_end": 89,
       "desc": "password mismatch error message",
       "project": "",
@@ -86,12 +86,54 @@
     },
     {
       "hashToText": {
+        "sb0jct6xd9XbxiDdEP4fNQ==": "Email already exists"
+      },
+      "filepath": "src/signup/signup.js",
+      "line_beg": 60,
+      "col_beg": 18,
+      "line_end": 60,
+      "col_end": 79,
+      "desc": "notification that email exists",
+      "project": "",
+      "type": "text",
+      "jsfbt": "Email already exists"
+    },
+    {
+      "hashToText": {
+        "3VU2URsW5m1ZGMbBzJ9srw==": "Failed to create account, please refresh the page or try again later"
+      },
+      "filepath": "src/signup/signup.js",
+      "line_beg": 61,
+      "col_beg": 18,
+      "line_end": 64,
+      "col_end": 19,
+      "desc": "notification about unknown create error",
+      "project": "",
+      "type": "text",
+      "jsfbt": "Failed to create account, please refresh the page or try again later"
+    },
+    {
+      "hashToText": {
+        "Hvoxrx1yMCVLZfBZDvxoaQ==": "Account created successfully"
+      },
+      "filepath": "src/signup/signup.js",
+      "line_beg": 69,
+      "col_beg": 18,
+      "line_end": 72,
+      "col_end": 13,
+      "desc": "notification that account creation was successful",
+      "project": "",
+      "type": "text",
+      "jsfbt": "Account created successfully"
+    },
+    {
+      "hashToText": {
         "RTXk2CZMwYWz7IdwwRWtWA==": "Create new account"
       },
       "filepath": "src/signup/signup.js",
-      "line_beg": 71,
+      "line_beg": 83,
       "col_beg": 8,
-      "line_end": 71,
+      "line_end": 83,
       "col_end": 69,
       "desc": "Create new account title",
       "project": "",
@@ -103,9 +145,9 @@
         "Bj8LytiFxhN5wlPx0jel9g==": "Create account"
       },
       "filepath": "src/signup/signup.js",
-      "line_beg": 87,
+      "line_beg": 111,
       "col_beg": 12,
-      "line_end": 87,
+      "line_end": 111,
       "col_end": 79,
       "desc": "Submit button to create an account",
       "project": "",
