@@ -21,4 +21,6 @@
 
   --text-size-normal: 1rem;
   --text-size-small: 0.875rem;
+
+  --z-index-on-top: 900;
 }

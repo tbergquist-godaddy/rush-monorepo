@@ -8,14 +8,15 @@
 
 /*::
 import type { ConcreteRequest } from 'relay-runtime';
+export type CreateAccountErrorReason = "EMAIL_EXISTS" | "INVALID_EMAIL" | "MISSING_PASSWORD" | "UNKNOWN" | "%future added value";
 export type signupMutationVariables = {|
   password: string,
   email: string,
 |};
 export type signupMutationResponse = {|
   +createAccount: {|
-    +message?: string,
     +__typename: "Identity",
+    +reason?: CreateAccountErrorReason,
   |}
 |};
 export type signupMutation = {|
@@ -34,9 +35,8 @@ mutation signupMutation(
     ... on Identity {
       __typename
     }
-    ... on Error {
-      __isError: __typename
-      message
+    ... on CreateAccountError {
+      reason
     }
   }
 }
@@ -79,12 +79,12 @@ const node /*: ConcreteRequest*/ = (function () {
           alias: null,
           args: null,
           kind: 'ScalarField',
-          name: 'message',
+          name: 'reason',
           storageKey: null,
         },
       ],
-      type: 'Error',
-      abstractKey: '__isError',
+      type: 'CreateAccountError',
+      abstractKey: null,
     };
   return {
     fragment: {
@@ -134,17 +134,17 @@ const node /*: ConcreteRequest*/ = (function () {
       ],
     },
     params: {
-      cacheID: 'fd7adce79666e3b5de917af5fb4308b0',
+      cacheID: 'c8fbeaedc34d0806c7d17636e425b349',
       id: null,
       metadata: {},
       name: 'signupMutation',
       operationKind: 'mutation',
       text:
-        'mutation signupMutation(\n  $password: String!\n  $email: String!\n) {\n  createAccount(password: $password, email: $email) {\n    __typename\n    ... on Identity {\n      __typename\n    }\n    ... on Error {\n      __isError: __typename\n      message\n    }\n  }\n}\n',
+        'mutation signupMutation(\n  $password: String!\n  $email: String!\n) {\n  createAccount(password: $password, email: $email) {\n    __typename\n    ... on Identity {\n      __typename\n    }\n    ... on CreateAccountError {\n      reason\n    }\n  }\n}\n',
     },
   };
 })();
 // prettier-ignore
-(node/*: any*/).hash = '88c03c4b859eb3ed3a60442ae7c63ec1';
+(node/*: any*/).hash = '3378e13ce9c3f4683f9945074e0c8052';
 
 module.exports = node;
