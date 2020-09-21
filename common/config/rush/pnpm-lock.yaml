@@ -67,6 +67,7 @@ dependencies:
   relay-compiler: 10.0.1_graphql@15.3.0
   relay-config: 10.0.1_relay-compiler@10.0.1
   relay-runtime: 10.0.1
+  relay-test-utils: 10.0.1_graphql@15.3.0
   rimraf: 3.0.2
   rxjs: 6.6.3
   style-loader: 1.2.1_webpack@4.44.2
@@ -13079,6 +13080,17 @@ packages:
     dev: false
     resolution:
       integrity: sha512-sPYiuosq+5gQ7zXs2EKg2O8qRSsF8vmMYo6SIHEi4juBLg1HrdTEvqcaNztc2ZFmUc4vYZpTbbS4j/TZCtHuyA==
+  /relay-test-utils/10.0.1_graphql@15.3.0:
+    dependencies:
+      '@babel/runtime': 7.11.2
+      fbjs: 1.0.0
+      graphql: 15.3.0
+      relay-runtime: 10.0.1
+    dev: false
+    peerDependencies:
+      graphql: ^15.0.0
+    resolution:
+      integrity: sha512-lcXdvfk6cp/LRChodk4/LW4WyZTltnnzaKeIw+8M4Ht8/1a0R9XI22iyHNpH3jdYdmksyK5xZ1l2pkm7ipXmEA==
   /remove-trailing-separator/1.1.0:
     dev: false
     resolution:
@@ -16060,6 +16072,7 @@ packages:
       '@babel/preset-react': 7.10.4_@babel+core@7.11.6
       '@babel/runtime': 7.11.2
       '@hookform/resolvers': 0.1.1_react-hook-form@6.8.3
+      '@testing-library/react': 11.0.4_aee71e629c1e3ebfaaa90e750af82ab3
       babel-eslint: 10.1.0_eslint@7.9.0
       babel-loader: 8.1.0_d2a654c8b7ff226093b38eb7b56a78a8
       babel-plugin-fbt: 0.15.1
@@ -16083,6 +16096,7 @@ packages:
       relay-compiler: 10.0.1_graphql@15.3.0
       relay-config: 10.0.1_relay-compiler@10.0.1
       relay-runtime: 10.0.1
+      relay-test-utils: 10.0.1_graphql@15.3.0
       style-loader: 1.2.1_webpack@4.44.2
       vercel: 20.1.0
       webpack: 4.44.2_93ca2875a658e9d1552850624e6b91c7
@@ -16095,7 +16109,7 @@ packages:
     peerDependencies:
       typescript: '*'
     resolution:
-      integrity: sha512-Hx4tIHfzqA5GfWuriFYUJNCgBuJGr0LMhOR/DPGCkPp6vhJ0sPHtcZWeYXOpbR37T+J6yoKuaibDtLZA2DJfXg==
+      integrity: sha512-f4a7QPqPSavJDo7UgmlsUTZJrIMi8XDZ9G+PA8KLBu1SO1BY9YPddLCt5OoNJG+j9m6poE7TjoqsYQjJv45QvQ==
       tarball: 'file:projects/team-assistant.tgz'
     version: 0.0.0
   'file:projects/test-utils.tgz':
@@ -16189,6 +16203,7 @@ specifiers:
   relay-compiler: ^10.0.1
   relay-config: ^10.0.1
   relay-runtime: ^10.0.1
+  relay-test-utils: ^10.0.1
   rimraf: ^3.0.2
   rxjs: ^6.6.3
   style-loader: ^1.2.1

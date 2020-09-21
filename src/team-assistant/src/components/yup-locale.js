@@ -26,6 +26,6 @@ import getLanguage from './get-language';
   const locale = locales[getLanguage()];
 
   if (locale != null) {
-    setLocale(locales[getLanguage()]);
+    setLocale(locale);
   }
 })();

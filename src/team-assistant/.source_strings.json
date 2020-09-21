@@ -33,9 +33,9 @@
         "7CIgyAEAEGPlyX0S/F7DwA==": "email"
       },
       "filepath": "src/signup/signup.js",
-      "line_beg": 15,
+      "line_beg": 17,
       "col_beg": 14,
-      "line_end": 15,
+      "line_end": 17,
       "col_end": 46,
       "desc": "email form label",
       "project": "",
@@ -47,9 +47,9 @@
         "Ub0eS5osOE0tKiy8EIVbtw==": "password"
       },
       "filepath": "src/signup/signup.js",
-      "line_beg": 16,
+      "line_beg": 19,
       "col_beg": 17,
-      "line_end": 16,
+      "line_end": 19,
       "col_end": 55,
       "desc": "password form label",
       "project": "",
@@ -58,26 +58,26 @@
     },
     {
       "hashToText": {
-        "fv+nQq0Qk6kJzmtYsaKI+g==": "confirmPassword"
+        "AWUuyxzzoQu78RlOEqCWyQ==": "confirm password"
       },
       "filepath": "src/signup/signup.js",
-      "line_beg": 17,
+      "line_beg": 21,
       "col_beg": 24,
-      "line_end": 17,
-      "col_end": 76,
+      "line_end": 21,
+      "col_end": 77,
       "desc": "confirmPassword form label",
       "project": "",
       "type": "text",
-      "jsfbt": "confirmPassword"
+      "jsfbt": "confirm password"
     },
     {
       "hashToText": {
         "KnEPm5DgOVgVY59Qh3d5qA==": "Passwords must match"
       },
       "filepath": "src/signup/signup.js",
-      "line_beg": 18,
+      "line_beg": 23,
       "col_beg": 27,
-      "line_end": 18,
+      "line_end": 23,
       "col_end": 89,
       "desc": "password mismatch error message",
       "project": "",
@@ -89,9 +89,9 @@
         "RTXk2CZMwYWz7IdwwRWtWA==": "Create new account"
       },
       "filepath": "src/signup/signup.js",
-      "line_beg": 65,
+      "line_beg": 71,
       "col_beg": 8,
-      "line_end": 65,
+      "line_end": 71,
       "col_end": 69,
       "desc": "Create new account title",
       "project": "",
@@ -103,9 +103,9 @@
         "Bj8LytiFxhN5wlPx0jel9g==": "Create account"
       },
       "filepath": "src/signup/signup.js",
-      "line_beg": 81,
+      "line_beg": 87,
       "col_beg": 12,
-      "line_end": 81,
+      "line_end": 87,
       "col_end": 79,
       "desc": "Submit button to create an account",
       "project": "",

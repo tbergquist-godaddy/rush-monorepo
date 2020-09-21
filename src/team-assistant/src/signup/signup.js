@@ -18,7 +18,7 @@ const email = fbt('email', 'email form label');
 // $FlowFixMe[prop-missing]
 const password = fbt('password', 'password form label');
 // $FlowFixMe[prop-missing]
-const confirmPassword = fbt('confirmPassword', 'confirmPassword form label');
+const confirmPassword = fbt('confirm password', 'confirmPassword form label');
 // $FlowFixMe[prop-missing]
 const passwordsMustMatch = fbt('Passwords must match', 'password mismatch error message');
 

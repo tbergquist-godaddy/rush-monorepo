@@ -184,7 +184,7 @@ declare module '@testing-library/react' {
     ...
   };
 
-  declare type RenderResult<Queries = GetsAndQueries> = {
+  declare export type RenderResult<Queries = GetsAndQueries> = {
     ...Queries,
     container: HTMLElement,
     unmount: () => boolean,
