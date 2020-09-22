@@ -2,23 +2,9 @@
   "phrases": [
     {
       "hashToText": {
-        "eRm64b0dkVt+121lfW8YVg==": "Home TODO"
-      },
-      "filepath": "src/home/home.js",
-      "line_beg": 29,
-      "col_beg": 8,
-      "line_end": 29,
-      "col_end": 45,
-      "desc": "Todo text",
-      "project": "",
-      "type": "text",
-      "jsfbt": "Home TODO"
-    },
-    {
-      "hashToText": {
         "7CIgyAEAEGPlyX0S/F7DwA==": "email"
       },
-      "filepath": "src/login/login-form.js",
+      "filepath": "src/account/login/login-form.js",
       "line_beg": 14,
       "col_beg": 14,
       "line_end": 14,
@@ -32,7 +18,7 @@
       "hashToText": {
         "Ub0eS5osOE0tKiy8EIVbtw==": "password"
       },
-      "filepath": "src/login/login-form.js",
+      "filepath": "src/account/login/login-form.js",
       "line_beg": 15,
       "col_beg": 17,
       "line_end": 15,
@@ -46,7 +32,7 @@
       "hashToText": {
         "6RZqgcqip6AejG03SudUCA==": "Login failed"
       },
-      "filepath": "src/login/login-form.js",
+      "filepath": "src/account/login/login-form.js",
       "line_beg": 43,
       "col_beg": 18,
       "line_end": 43,
@@ -60,7 +46,7 @@
       "hashToText": {
         "F3p8DbdliugG4CTKslAYqA==": "Login"
       },
-      "filepath": "src/login/login-form.js",
+      "filepath": "src/account/login/login-form.js",
       "line_beg": 76,
       "col_beg": 10,
       "line_end": 76,
@@ -74,7 +60,7 @@
       "hashToText": {
         "RxTN03wa+rCj2a9uR9IJuw==": "Login"
       },
-      "filepath": "src/login/login.js",
+      "filepath": "src/account/login/login.js",
       "line_beg": 18,
       "col_beg": 8,
       "line_end": 18,
@@ -88,7 +74,7 @@
       "hashToText": {
         "BAt6KUtf7sZ47BOgQkl2Ig==": "Don't have an account?"
       },
-      "filepath": "src/login/login.js",
+      "filepath": "src/account/login/login.js",
       "line_beg": 23,
       "col_beg": 10,
       "line_end": 23,
@@ -102,7 +88,7 @@
       "hashToText": {
         "PoSQRs3C3mXEwlSycx6Eyg==": "Sign up"
       },
-      "filepath": "src/login/login.js",
+      "filepath": "src/account/login/login.js",
       "line_beg": 26,
       "col_beg": 10,
       "line_end": 26,
@@ -116,7 +102,7 @@
       "hashToText": {
         "7CIgyAEAEGPlyX0S/F7DwA==": "email"
       },
-      "filepath": "src/signup/signup.js",
+      "filepath": "src/account/signup/signup.js",
       "line_beg": 15,
       "col_beg": 14,
       "line_end": 15,
@@ -130,7 +116,7 @@
       "hashToText": {
         "Ub0eS5osOE0tKiy8EIVbtw==": "password"
       },
-      "filepath": "src/signup/signup.js",
+      "filepath": "src/account/signup/signup.js",
       "line_beg": 16,
       "col_beg": 17,
       "line_end": 16,
@@ -144,7 +130,7 @@
       "hashToText": {
         "AWUuyxzzoQu78RlOEqCWyQ==": "confirm password"
       },
-      "filepath": "src/signup/signup.js",
+      "filepath": "src/account/signup/signup.js",
       "line_beg": 17,
       "col_beg": 24,
       "line_end": 17,
@@ -158,7 +144,7 @@
       "hashToText": {
         "KnEPm5DgOVgVY59Qh3d5qA==": "Passwords must match"
       },
-      "filepath": "src/signup/signup.js",
+      "filepath": "src/account/signup/signup.js",
       "line_beg": 18,
       "col_beg": 27,
       "line_end": 18,
@@ -172,7 +158,7 @@
       "hashToText": {
         "sb0jct6xd9XbxiDdEP4fNQ==": "Email already exists"
       },
-      "filepath": "src/signup/signup.js",
+      "filepath": "src/account/signup/signup.js",
       "line_beg": 59,
       "col_beg": 18,
       "line_end": 59,
@@ -186,7 +172,7 @@
       "hashToText": {
         "3VU2URsW5m1ZGMbBzJ9srw==": "Failed to create account, please refresh the page or try again later"
       },
-      "filepath": "src/signup/signup.js",
+      "filepath": "src/account/signup/signup.js",
       "line_beg": 60,
       "col_beg": 18,
       "line_end": 63,
@@ -200,7 +186,7 @@
       "hashToText": {
         "Hvoxrx1yMCVLZfBZDvxoaQ==": "Account created successfully"
       },
-      "filepath": "src/signup/signup.js",
+      "filepath": "src/account/signup/signup.js",
       "line_beg": 68,
       "col_beg": 18,
       "line_end": 71,
@@ -214,7 +200,7 @@
       "hashToText": {
         "RTXk2CZMwYWz7IdwwRWtWA==": "Create new account"
       },
-      "filepath": "src/signup/signup.js",
+      "filepath": "src/account/signup/signup.js",
       "line_beg": 82,
       "col_beg": 8,
       "line_end": 82,
@@ -228,7 +214,7 @@
       "hashToText": {
         "Bj8LytiFxhN5wlPx0jel9g==": "Create account"
       },
-      "filepath": "src/signup/signup.js",
+      "filepath": "src/account/signup/signup.js",
       "line_beg": 113,
       "col_beg": 10,
       "line_end": 113,
@@ -237,6 +223,20 @@
       "project": "",
       "type": "text",
       "jsfbt": "Create account"
+    },
+    {
+      "hashToText": {
+        "eRm64b0dkVt+121lfW8YVg==": "Home TODO"
+      },
+      "filepath": "src/home/home.js",
+      "line_beg": 29,
+      "col_beg": 8,
+      "line_end": 29,
+      "col_end": 45,
+      "desc": "Todo text",
+      "project": "",
+      "type": "text",
+      "jsfbt": "Home TODO"
     }
   ],
   "childParentMappings": {}

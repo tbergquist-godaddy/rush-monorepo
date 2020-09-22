@@ -9,8 +9,9 @@ import { yupResolver } from '@hookform/resolvers';
 import { object, string, ref } from 'yup';
 import { useNavigate } from 'react-router-dom';
 
-import useInjectSxStyles from '../components/useInjectSxStyles';
+import useInjectSxStyles from '../../components/use-inject-sx-styles';
 import type { signupMutation as SignupMutation } from './__generated__/signupMutation.graphql';
+import AccountFormContainer from '../components/account-form-container';
 
 const email = fbt('email', 'email form label');
 const password = fbt('password', 'password form label');
@@ -77,42 +78,44 @@ export default function Signup(): React.Node {
   };
 
   return (
-    <form action="#" onSubmit={handleSubmit(onSubmit)}>
-      <Heading level="h1">
-        <fbt desc="Create new account title">Create new account</fbt>
-      </Heading>
-      <FormGroup>
-        <Input
-          ref={register}
-          name="email"
-          type="email"
-          label={email}
-          error={errors.email?.message}
-        />
-      </FormGroup>
-      <FormGroup>
-        <Input
-          type="password"
-          label={password}
-          name="password"
-          ref={register}
-          error={errors.password?.message}
-        />
-      </FormGroup>
-      <FormGroup>
-        <Input
-          type="password"
-          label={confirmPassword}
-          name="confirmPassword"
-          ref={register}
-          error={errors.confirmPassword?.message}
-        />
-      </FormGroup>
-      <FormGroup align="right">
-        <Button isLoading={isLoading} type="submit">
-          <fbt desc="Submit button to create an account">Create account</fbt>
-        </Button>
-      </FormGroup>
-    </form>
+    <AccountFormContainer>
+      <form action="#" onSubmit={handleSubmit(onSubmit)}>
+        <Heading level="h1">
+          <fbt desc="Create new account title">Create new account</fbt>
+        </Heading>
+        <FormGroup>
+          <Input
+            ref={register}
+            name="email"
+            type="email"
+            label={email}
+            error={errors.email?.message}
+          />
+        </FormGroup>
+        <FormGroup>
+          <Input
+            type="password"
+            label={password}
+            name="password"
+            ref={register}
+            error={errors.password?.message}
+          />
+        </FormGroup>
+        <FormGroup>
+          <Input
+            type="password"
+            label={confirmPassword}
+            name="confirmPassword"
+            ref={register}
+            error={errors.confirmPassword?.message}
+          />
+        </FormGroup>
+        <FormGroup align="right">
+          <Button isLoading={isLoading} type="submit">
+            <fbt desc="Submit button to create an account">Create account</fbt>
+          </Button>
+        </FormGroup>
+      </form>
+    </AccountFormContainer>
   );
 }
