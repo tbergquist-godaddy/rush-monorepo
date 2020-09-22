@@ -81,13 +81,13 @@ it('submits the form', async () => {
   await waitFor(() => expect(confirmPassword).toHaveValue('123'));
   userEvent.click(button);
 
-  await waitFor(() => expect(screen.getByText('loading...')).toBeInTheDocument());
+  await waitFor(() => expect(button).toBeDisabled());
   const operation = await waitFor(() => environment.mock.getMostRecentOperation());
 
   act(() => {
     environment.mock.resolve(operation, { data: { createAccount: { __typename: 'Identity' } } });
   });
 
-  await waitFor(() => expect(screen.queryByText('loading...')).not.toBeInTheDocument());
+  await waitFor(() => expect(button).not.toBeDisabled());
   expect(navigate).toHaveBeenCalledWith('/login');
 });

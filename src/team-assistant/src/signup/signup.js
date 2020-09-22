@@ -104,12 +104,8 @@ export default function Signup(): React.Node {
         />
       </FormGroup>
       <div className={styles('buttonContainer')}>
-        <Button type="submit">
-          {isLoading ? (
-            'loading...'
-          ) : (
-            <fbt desc="Submit button to create an account">Create account</fbt>
-          )}
+        <Button isLoading={isLoading} type="submit">
+          <fbt desc="Submit button to create an account">Create account</fbt>
         </Button>
       </div>
     </form>
