@@ -17,6 +17,7 @@ for (const style of sxStyleTags) {
   styleTag.setAttribute('data-adeira-sx', 'true');
 
   if (head != null) {
+    // 🤷‍♂️
     head.appendChild(styleTag);
   }
 }
