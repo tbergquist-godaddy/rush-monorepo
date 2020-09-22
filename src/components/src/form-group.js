@@ -5,7 +5,7 @@ import { create } from '@adeira/sx';
 
 type Props = {
   +children: React.Node,
-  +align?: 'right',
+  +align?: 'right' | 'center',
 };
 
 export default function FormGroup({ children, align }: Props): React.Node {
@@ -19,5 +19,9 @@ const styles = create({
   right: {
     display: 'flex',
     justifyContent: 'flex-end',
+  },
+  center: {
+    display: 'flex',
+    justifyContent: 'center',
   },
 });
