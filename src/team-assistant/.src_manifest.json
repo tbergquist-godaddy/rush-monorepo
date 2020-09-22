@@ -2,6 +2,7 @@
   ".enum_manifest.json": [
     "src/components/app.js",
     "src/home/home.js",
+    "src/login/login-form.js",
     "src/login/login.js",
     "src/signup/signup.js"
   ]

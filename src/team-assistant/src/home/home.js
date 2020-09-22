@@ -28,7 +28,7 @@ function Content({ queryReference }) {
       <h1>
         <fbt desc="Todo text">Home TODO</fbt>
       </h1>
-      <Link to="/login">Go home</Link>
+      <Link to="/login">Go login</Link>
       <div>{data.test.id}</div>
       <div>{data.test.firstName}</div>
       <div>{data.test.lastName}</div>

@@ -11,16 +11,6 @@
         }
       ]
     },
-    "HzzziAk+1+ABS+lI7SSccw==": {
-      "tokens": [],
-      "types": [],
-      "translations": [
-        {
-          "translation": "iniciar a hacer",
-          "variations": []
-        }
-      ]
-    },
     "7CIgyAEAEGPlyX0S/F7DwA==": {
       "tokens": [],
       "types": [],
@@ -37,6 +27,56 @@
       "translations": [
         {
           "translation": "contraseña",
+          "variations": []
+        }
+      ]
+    },
+    "6RZqgcqip6AejG03SudUCA==": {
+      "tokens": [],
+      "types": [],
+      "translations": [
+        {
+          "translation": "Error al iniciar sesión",
+          "variations": []
+        }
+      ]
+    },
+    "F3p8DbdliugG4CTKslAYqA==": {
+      "tokens": [],
+      "types": [],
+      "translations": [
+        {
+          "translation": "Iniciar",
+          "variations": []
+        }
+      ]
+    },
+    "RxTN03wa+rCj2a9uR9IJuw==": {
+      "tokens": [],
+      "types": [],
+      "translations": [
+        {
+          "translation": "Iniciar",
+          "variations": []
+        }
+      ]
+    },
+    "BAt6KUtf7sZ47BOgQkl2Ig==": {
+      "tokens": [],
+      "types": [],
+      "translations": [
+        {
+          "translation": "¿No tienes una cuenta?",
+          "variations": []
+        }
+      ]
+    },
+    "PoSQRs3C3mXEwlSycx6Eyg==": {
+      "tokens": [],
+      "types": [],
+      "translations": [
+        {
+          "translation": "Registrarse",
           "variations": []
         }
       ]
