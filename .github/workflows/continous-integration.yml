@@ -30,9 +30,10 @@ jobs:
         with:
           path: |
             **/dist
-            common/temp
+            common/temp/**
             **/.rush/temp
           key: rush
+          restore-keys: rush
 
       - name: Build
         run: |
@@ -65,9 +66,10 @@ jobs:
         with:
           path: |
             **/dist
-            common/temp
+            common/temp/**
             **/.rush/temp
           key: rush
+          restore-keys: rush
 
       - name: Deploy
         run: |
