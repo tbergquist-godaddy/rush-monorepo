@@ -60,7 +60,7 @@ class UserDoc extends mongoose.Model {
     const salt = generateSalt(16);
     const password = encryptPassword(input.password, salt);
     const user = await this.create({
-      ...input,
+      email: input.email.toLowerCase(),
       password,
       salt,
     });
@@ -68,12 +68,12 @@ class UserDoc extends mongoose.Model {
   }
 
   static async getByEmail(email: string): Promise<UserDoc | null> {
-    const user = await this.findById(email);
+    const user = await this.findById(email.toLowerCase());
     return user;
   }
 
   static async verifyPassword(email: string, password: string): Promise<UserDoc | null> {
-    const user = await this.getByEmail(email);
+    const user = await this.getByEmail(email.toLowerCase());
     if (user == null || user.password !== encryptPassword(password, user.salt)) {
       return null;
     }

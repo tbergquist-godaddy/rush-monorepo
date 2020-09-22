@@ -32,11 +32,11 @@ jobs:
             **/dist
             common/temp
             **/.rush/temp
-          key: ${{ runner.os }}-yarn-${{ hashFiles('common/config/rush/pnpm-lock.yaml') }}
+          key: rush
 
       - name: Build
         run: |
-          node common/scripts/install-run-rush.js install -p --no-link
+          node common/scripts/install-run-rush.js install --no-link
           node common/scripts/install-run-rush.js link
           node common/scripts/install-run-rush.js build -v -o
           node common/scripts/install-run-rush.js typecheck
@@ -67,7 +67,7 @@ jobs:
             **/dist
             common/temp
             **/.rush/temp
-          key: ${{ runner.os }}-yarn-${{ hashFiles('common/config/rush/pnpm-lock.yaml') }}
+          key: rush
 
       - name: Deploy
         run: |
