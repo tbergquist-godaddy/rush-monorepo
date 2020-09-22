@@ -1,20 +1,31 @@
 // @flow
 
 import * as React from 'react';
-import { Link } from 'react-router-dom';
+import { useHref } from 'react-router-dom';
 import fbt from 'fbt';
+import { Heading, Link, Text } from '@tbergq/components';
 
 import useInjectSxStyles from '../components/useInjectSxStyles';
+import LoginForm from './login-form';
 
 export default function Login(): React.Node {
   useInjectSxStyles();
+  const href = useHref('/signup');
+
   return (
     <div>
-      <h1>
-        <fbt desc="login todo">login TODO</fbt>
-      </h1>
-      <Link to="/">Go home</Link>
-      <Link to="/signup">Sign up</Link>
+      <Heading level="h1">
+        <fbt desc="login header">Login</fbt>
+      </Heading>
+      <LoginForm />
+      <div>
+        <Text>
+          <fbt desc="signup description">Don&apos;t have an account?</fbt>
+        </Text>{' '}
+        <Link href={href}>
+          <fbt desc="Signup link">Sign up</fbt>
+        </Link>
+      </div>
     </div>
   );
 }

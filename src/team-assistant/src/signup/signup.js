@@ -3,7 +3,6 @@
 import * as React from 'react';
 import { Heading, Input, FormGroup, Button, useShowToast } from '@tbergq/components';
 import { fbt } from 'fbt';
-import * as sx from '@adeira/sx';
 import { graphql, useMutation } from 'react-relay/hooks';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers';
@@ -109,18 +108,11 @@ export default function Signup(): React.Node {
           error={errors.confirmPassword?.message}
         />
       </FormGroup>
-      <div className={styles('buttonContainer')}>
+      <FormGroup align="right">
         <Button isLoading={isLoading} type="submit">
           <fbt desc="Submit button to create an account">Create account</fbt>
         </Button>
-      </div>
+      </FormGroup>
     </form>
   );
 }
-
-const styles = sx.create({
-  buttonContainer: {
-    display: 'flex',
-    justifyContent: 'flex-end',
-  },
-});
