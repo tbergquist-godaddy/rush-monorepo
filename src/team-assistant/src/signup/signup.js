@@ -83,7 +83,13 @@ export default function Signup(): React.Node {
         <fbt desc="Create new account title">Create new account</fbt>
       </Heading>
       <FormGroup>
-        <Input ref={register} name="email" label={email} error={errors.email?.message} />
+        <Input
+          ref={register}
+          name="email"
+          type="email"
+          label={email}
+          error={errors.email?.message}
+        />
       </FormGroup>
       <FormGroup>
         <Input
