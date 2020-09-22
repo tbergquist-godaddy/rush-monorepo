@@ -4,6 +4,7 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 import fbt from 'fbt';
 import { useQueryLoader, usePreloadedQuery, graphql } from 'react-relay/hooks';
+import { Spinner } from '@tbergq/components';
 
 import type { homeQuery } from './__generated__/homeQuery.graphql';
 import useInjectSxStyles from '../components/useInjectSxStyles';
@@ -43,11 +44,11 @@ export default function Home(): React.Node {
   }, [loadQuery]);
 
   if (queryReference == null) {
-    return <div>loading...</div>;
+    return <Spinner />;
   }
 
   return (
-    <React.Suspense fallback="loading...">
+    <React.Suspense fallback={<Spinner />}>
       <Content queryReference={queryReference} />
     </React.Suspense>
   );

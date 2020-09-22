@@ -9,3 +9,4 @@ export { default as FormGroup } from './form-group';
 export { default as Toast } from './toast/toast';
 export { useShowToast } from './toast/toast-list-state';
 export { default as Alert } from './alert';
+export { default as Spinner } from './spinner/spinner';

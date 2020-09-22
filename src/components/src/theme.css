@@ -1,3 +1,5 @@
+@import './spinner/spinner.css';
+
 :root {
   --border-radius-normal: 3px;
 

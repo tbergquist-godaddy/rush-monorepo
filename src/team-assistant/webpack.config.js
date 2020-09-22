@@ -54,6 +54,10 @@ module.exports = {
         test: (/\.css$/i /*: RegExp  */),
         use: ['style-loader', 'css-loader'],
       },
+      {
+        test: (/\.svg$/ /*: RegExp  */),
+        use: ['@svgr/webpack'],
+      },
     ],
   },
 };

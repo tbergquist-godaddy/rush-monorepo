@@ -3,24 +3,28 @@
 import * as React from 'react';
 import { create } from '@adeira/sx';
 
+import Spinner from '../spinner/spinner';
+
 type Props = {
   +children: React.Node,
   +variant?: 'primary' | 'secondary',
   +type?: 'button' | 'submit',
   +onClick?: () => void,
+  +isLoading?: boolean,
 };
 
 export default function Button({
   children,
   variant = 'primary',
   type = 'button',
+  isLoading,
   ...rest
 }: Props): React.Node {
   return (
     <>
       {/* eslint-disable-next-line react/button-has-type */}
-      <button type={type} className={styles('button', variant)} {...rest}>
-        {children}
+      <button disabled={isLoading} type={type} className={styles('button', variant)} {...rest}>
+        {isLoading === true ? <Spinner size="small" color="white" /> : children}
       </button>
     </>
   );
