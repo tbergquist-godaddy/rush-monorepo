@@ -8,7 +8,7 @@ import userEvent from '@testing-library/user-event';
 import router from 'react-router-dom';
 
 import Signup from '../signup';
-import render from '../../utils/test-renderer';
+import render from '../../../utils/test-renderer';
 
 let environment;
 jest.mock('react-router-dom', () => ({

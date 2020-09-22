@@ -7,7 +7,7 @@ import { useQueryLoader, usePreloadedQuery, graphql } from 'react-relay/hooks';
 import { Spinner } from '@tbergq/components';
 
 import type { homeQuery } from './__generated__/homeQuery.graphql';
-import useInjectSxStyles from '../components/useInjectSxStyles';
+import useInjectSxStyles from '../components/use-inject-sx-styles';
 
 const query = graphql`
   query homeQuery {

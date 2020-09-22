@@ -114,7 +114,7 @@ jobs:
             common/temp/node_modules
             common/temp/projects
           key: ${{ runner.os }}-${{ hashFiles('common/temp/pnpm-lock.yaml') }}
-  
+
       - name: Cache team-assistant-gql
         uses: actions/cache@v2
         with:
@@ -167,7 +167,7 @@ jobs:
         run: |
           node common/scripts/install-run-rush.js install --no-link
           node common/scripts/install-run-rush.js link
-          node common/scripts/install-run-rush.js build -v -o
+          node common/scripts/install-run-rush.js build
           yarn global add heroku
           node common/scripts/install-run-rush.js deploy:apps
         env:

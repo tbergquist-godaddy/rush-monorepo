@@ -7,7 +7,7 @@ import { RelayEnvironmentProvider } from 'react-relay/hooks';
 import userEvent from '@testing-library/user-event';
 import router from 'react-router-dom';
 
-import render from '../../utils/test-renderer';
+import render from '../../../utils/test-renderer';
 import LoginForm from '../login-form';
 
 jest.mock('react-router-dom', () => ({
