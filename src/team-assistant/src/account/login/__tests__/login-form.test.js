@@ -97,5 +97,5 @@ it('redirects after login', async () => {
     );
   });
 
-  expect(navigate).toHaveBeenCalledWith('/');
+  expect(navigate).toHaveBeenCalledWith('/dashboard');
 });

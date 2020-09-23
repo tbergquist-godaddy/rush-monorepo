@@ -52,6 +52,15 @@
     "enableParallelism": true,
     "incremental": true,
     "ignoreMissingScript": true
+  },
+  {
+    "commandKind": "bulk",
+    "name": "relay:validate",
+    "summary": "Validate relay fragments",
+    "description": "Validate relay fragments",
+    "enableParallelism": true,
+    "incremental": true,
+    "ignoreMissingScript": true
   }
 ],
 

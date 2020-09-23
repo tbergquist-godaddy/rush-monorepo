@@ -10,6 +10,7 @@ import { graphql, useMutation } from 'react-relay/hooks';
 import { useNavigate } from 'react-router-dom';
 
 import type { loginFormMutation } from './__generated__/loginFormMutation.graphql';
+import { AUTH_KEY } from '../../utils/consts';
 
 const email = fbt('email', 'email form label');
 const password = fbt('password', 'password form label');
@@ -38,14 +39,15 @@ export default function LoginForm(): React.Node {
     login({
       variables: { email, password },
       onCompleted: (res, err) => {
-        if (res.login.token == null || err != null) {
+        const token = res.login.token;
+        if (token == null || err != null) {
           showToast({
             text: fbt('Login failed', 'Login failed notification'),
             type: 'danger',
           });
         } else {
-          // TODO: Redirect to logged in page
-          navigate('/');
+          localStorage.setItem(AUTH_KEY, token);
+          navigate('/dashboard');
         }
       },
     });
