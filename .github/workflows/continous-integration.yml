@@ -29,57 +29,11 @@ jobs:
         uses: actions/cache@v2
         with:
           path: |
+            **/dist
+            **/.rush/temp
             common/temp/node_modules
             common/temp/projects
-          key: ${{ runner.os }}-${{ hashFiles('common/temp/pnpm-lock.yaml') }}
-
-      - name: Cache team-assistant-gql
-        uses: actions/cache@v2
-        with:
-          path: |
-            src/team-assistant-gql/dist
-            src/team-assistant-gql/.rush/temp
-          key: ${{ runner.os }}-${{ hashFiles('src/team-assistant-gql/.rush/temp/*.json') }}
-
-      - name: Cache team-assistant
-        uses: actions/cache@v2
-        with:
-          path: |
-            src/team-assistant/dist
-            src/team-assistant/.rush/temp
-          key: ${{ runner.os }}-${{ hashFiles('src/team-assistant/.rush/temp/*.json') }}
-
-      - name: Cache components
-        uses: actions/cache@v2
-        with:
-          path: |
-            src/components/dist
-            src/components/.rush/temp
-          key: ${{ runner.os }}-${{ hashFiles('src/components/.rush/temp/*.json') }}
-
-      - name: Cache test-utils
-        uses: actions/cache@v2
-        with:
-          path: |
-            tools/test-utils/dist
-            tools/test-utils/.rush/temp
-          key: ${{ runner.os }}-${{ hashFiles('tools/test-utils/.rush/temp/*.json') }}
-
-      - name: Cache eslint-config
-        uses: actions/cache@v2
-        with:
-          path: |
-            tools/eslint-config/dist
-            tools/eslint-config/.rush/temp
-          key: ${{ runner.os }}-${{ hashFiles('tools/eslint-config/.rush/temp/*.json') }}
-
-      - name: Cache flow
-        uses: actions/cache@v2
-        with:
-          path: |
-            tools/flow/dist
-            tools/flow/.rush/temp
-          key: ${{ runner.os }}-${{ hashFiles('tools/flow/.rush/temp/*.json') }}
+          key: ${{ runner.os }}-${{ hashFiles('**/common/config/rush/pnpm-lock.yaml') }}
 
       - name: Build
         run: |
@@ -91,86 +45,8 @@ jobs:
           node common/scripts/install-run-rush.js relay:validate
           node common/scripts/install-run-rush.js test
 
-  deploy:
-    name: deploy
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        node-version: [14.x]
-    needs: [build]
-    if: github.ref == 'refs/heads/master'
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-
-      - name: Cache common
-        uses: actions/cache@v2
-        with:
-          path: |
-            common/temp/node_modules
-            common/temp/projects
-          key: ${{ runner.os }}-${{ hashFiles('common/temp/pnpm-lock.yaml') }}
-
-      - name: Cache team-assistant-gql
-        uses: actions/cache@v2
-        with:
-          path: |
-            src/team-assistant-gql/dist
-            src/team-assistant-gql/.rush/temp
-          key: ${{ runner.os }}-build-${{ hashFiles('src/team-assistant-gql/.rush/temp/*.json') }}
-
-      - name: Cache team-assistant
-        uses: actions/cache@v2
-        with:
-          path: |
-            src/team-assistant/dist
-            src/team-assistant/.rush/temp
-          key: ${{ runner.os }}-build-${{ hashFiles('src/team-assistant/.rush/temp/*.json') }}
-
-      - name: Cache components
-        uses: actions/cache@v2
-        with:
-          path: |
-            src/components/dist
-            src/components/.rush/temp
-          key: ${{ runner.os }}-build-${{ hashFiles('src/components/.rush/temp/*.json') }}
-
-      - name: Cache test-utils
-        uses: actions/cache@v2
-        with:
-          path: |
-            tools/test-utils/dist
-            tools/test-utils/.rush/temp
-          key: ${{ runner.os }}-build-${{ hashFiles('tools/test-utils/.rush/temp/*.json') }}
-
-      - name: Cache eslint-config
-        uses: actions/cache@v2
-        with:
-          path: |
-            tools/eslint-config/dist
-            tools/eslint-config/.rush/temp
-          key: ${{ runner.os }}-build-${{ hashFiles('tools/eslint-config/.rush/temp/*.json') }}
-
-      - name: Cache flow
-        uses: actions/cache@v2
-        with:
-          path: |
-            tools/flow/dist
-            tools/flow/.rush/temp
-          key: ${{ runner.os }}-build-${{ hashFiles('tools/flow/.rush/temp/*.json') }}
-
       - name: Deploy
         run: |
-          node common/scripts/install-run-rush.js install --no-link
-          node common/scripts/install-run-rush.js link
-          node common/scripts/install-run-rush.js build
           yarn global add heroku
           node common/scripts/install-run-rush.js deploy:apps
-        env:
-          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-          ZEIT_TOKEN: ${{ secrets.ZEIT_TOKEN }}
+        if: github.ref == 'refs/heads/master'
