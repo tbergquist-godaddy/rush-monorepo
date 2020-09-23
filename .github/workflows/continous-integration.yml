@@ -50,3 +50,6 @@ jobs:
           yarn global add heroku
           node common/scripts/install-run-rush.js deploy:apps
         if: github.ref == 'refs/heads/master'
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+          ZEIT_TOKEN: ${{ secrets.ZEIT_TOKEN }}
