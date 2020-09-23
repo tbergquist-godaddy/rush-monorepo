@@ -46,7 +46,7 @@
   },
   {
     "commandKind": "bulk",
-    "name": "deploy:apps",
+    "name": "deploy-apps",
     "summary": "Deploy apps",
     "description": "Deploy apps",
     "enableParallelism": true,
@@ -55,7 +55,7 @@
   },
   {
     "commandKind": "bulk",
-    "name": "relay:validate",
+    "name": "relay-validate",
     "summary": "Validate relay fragments",
     "description": "Validate relay fragments",
     "enableParallelism": true,

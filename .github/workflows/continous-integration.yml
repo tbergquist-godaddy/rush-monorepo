@@ -29,11 +29,14 @@ jobs:
         uses: actions/cache@v2
         with:
           path: |
-            **/dist
-            **/.rush/temp
             common/temp/node_modules
             common/temp/projects
           key: ${{ runner.os }}-${{ hashFiles('**/common/config/rush/pnpm-lock.yaml') }}
+
+      # - name: Download build artifacts
+      #   uses: actions/download-artifact@v2
+      #   with:
+      #     name: build_artifacts
 
       - name: Build
         run: |
@@ -43,14 +46,22 @@ jobs:
           node common/scripts/install-run-rush.js build
           node common/scripts/install-run-rush.js typecheck
           node common/scripts/install-run-rush.js lint
-          node common/scripts/install-run-rush.js relay:validate
+          node common/scripts/install-run-rush.js relay-validate
           node common/scripts/install-run-rush.js test
 
       - name: Deploy
         run: |
           yarn global add heroku
-          node common/scripts/install-run-rush.js deploy:apps
+          node common/scripts/install-run-rush.js deploy-apps
         if: github.ref == 'refs/heads/master'
         env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
           ZEIT_TOKEN: ${{ secrets.ZEIT_TOKEN }}
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: build_artifacts
+          path: |
+            **/dist
+            **/.rush/temp

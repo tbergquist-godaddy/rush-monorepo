@@ -47,6 +47,6 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "start": "node dist/src/main.js",
-    "deploy:apps": "node scripts/deploy.js"
+    "deploy-apps": "node scripts/deploy.js"
   }
 }
