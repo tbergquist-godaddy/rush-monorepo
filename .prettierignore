@@ -20,3 +20,7 @@ public
 *.md
 
 .vercel
+
+# Generated files
+
+__generated__

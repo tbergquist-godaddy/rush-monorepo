@@ -9,7 +9,7 @@ type Props = {
   +as?: 'p' | 'div' | 'span',
 };
 
-export default function Text({ children, type, as = 'span' }: Props): React.Node {
+export default function Text({ children, type = 'primary', as = 'span' }: Props): React.Node {
   const Component = as;
   return <Component className={styles(type)}>{children}</Component>;
 }

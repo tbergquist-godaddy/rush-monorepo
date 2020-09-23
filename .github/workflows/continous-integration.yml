@@ -88,6 +88,7 @@ jobs:
           node common/scripts/install-run-rush.js build
           node common/scripts/install-run-rush.js typecheck
           node common/scripts/install-run-rush.js lint
+          node common/scripts/install-run-rush.js relay:validate
           node common/scripts/install-run-rush.js test
 
   deploy:

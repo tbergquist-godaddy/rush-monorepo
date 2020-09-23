@@ -12,6 +12,7 @@
     "translate": "fbt-translate --translations translations/*.json --jenkins > translatedFbts.json",
     "fbt": "rushx manifest && rushx collect && rushx translate",
     "relay": "relay-compiler",
+    "relay:validate": "relay-compiler --validate",
     "get:schema": "cp ../team-assistant-gql/schema.gql ./schema.graphql",
     "start": "http-server dist/ -o -p 9000"
   },
