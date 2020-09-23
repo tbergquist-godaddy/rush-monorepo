@@ -39,6 +39,7 @@ jobs:
         run: |
           node common/scripts/install-run-rush.js install --no-link
           node common/scripts/install-run-rush.js link
+          node common/scripts/install-run-rush.js check
           node common/scripts/install-run-rush.js build
           node common/scripts/install-run-rush.js typecheck
           node common/scripts/install-run-rush.js lint
